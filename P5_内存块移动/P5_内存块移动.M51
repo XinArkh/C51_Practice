@@ -1,0 +1,56 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/29/2018  14:14:35  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL\C51\BIN\BL51.EXE block_move.obj TO P5_内存块移动 RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  block_move.obj (BLOCK_MOVE)
+
+
+LINK MAP OF MODULE:  P5_内存块移动 (BLOCK_MOVE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     012AH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  P5_内存块移动 (BLOCK_MOVE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        BLOCK_MOVE
+  C:0124H         SYMBOL        LOOP
+  C:0100H         SYMBOL        START
+  C:0000H         LINE#         2
+  C:0100H         LINE#         4
+  C:0103H         LINE#         5
+  C:0106H         LINE#         6
+  C:0109H         LINE#         7
+  C:010CH         LINE#         8
+  C:010FH         LINE#         9
+  C:0112H         LINE#         10
+  C:0115H         LINE#         11
+  C:0118H         LINE#         12
+  C:011BH         LINE#         13
+  C:011EH         LINE#         14
+  C:0120H         LINE#         15
+  C:0122H         LINE#         16
+  C:0124H         LINE#         17
+  C:0125H         LINE#         18
+  C:0126H         LINE#         19
+  C:0127H         LINE#         20
+  C:0128H         LINE#         21
+  -------         ENDMOD        BLOCK_MOVE
+
+Program Size: data=8.0 xdata=0 code=298
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,54 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/29/2018  12:01:16  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL\C51\BIN\BL51.EXE BCD.obj TO P2_进制BCD码转换 RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  BCD.obj (BCD)
+
+
+LINK MAP OF MODULE:  P2_进制BCD码转换 (BCD)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     001FH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  P2_进制BCD码转换 (BCD)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        BCD
+  D:00F0H         SYMBOL        B
+  C:000DH         SYMBOL        BINTOBAC
+  N:0030H         SYMBOL        RESULT
+  D:0081H         SYMBOL        SP
+  C:0003H         SYMBOL        START
+  C:0000H         LINE#         3
+  C:0003H         LINE#         4
+  C:0006H         LINE#         5
+  C:0008H         LINE#         6
+  C:000BH         LINE#         7
+  C:000DH         LINE#         9
+  C:0010H         LINE#         10
+  C:0011H         LINE#         11
+  C:0013H         LINE#         12
+  C:0015H         LINE#         13
+  C:0018H         LINE#         14
+  C:0019H         LINE#         15
+  C:001BH         LINE#         16
+  C:001EH         LINE#         17
+  -------         ENDMOD        BCD
+
+Program Size: data=8.0 xdata=0 code=31
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

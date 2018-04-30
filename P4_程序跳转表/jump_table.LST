@@ -1,0 +1,60 @@
+A51 MACRO ASSEMBLER  JUMP_TABLE                                                           04/29/2018 13:49:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN jump_table.OBJ
+ASSEMBLER INVOKED BY: E:\Keil\C51\BIN\A51.EXE jump_table.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000                   2     START:
+0000 7400              3     MOV  A,#0                     ;设置地址偏移量
+0002 1113              4     CALL FUNCENTER
+0004 7401              5     MOV  A,#1                     ;设置地址偏移量
+0006 1113              6     CALL FUNCENTER
+0008 7402              7     MOV  A,#2                     ;设置地址偏移量
+000A 1113              8     CALL FUNCENTER
+000C 7403              9     MOV  A,#3                     ;设置地址偏移量
+000E 1113             10     CALL FUNCENTER
+0010 020010           11     LJMP $
+0013                  12     FUNCENTER:
+0013 25E0             13     ADD  A,ACC                  ;AJMP为二字节指令，地址偏移量*2
+0015 900019           14     MOV  DPTR,#FUNCTAB      ;设置基址
+0018 73               15     JMP  @A+DPTR                ;跳转到目标地址
+0019                  16     FUNCTAB:
+0019 0121             17     AJMP FUNC0
+001B 0125             18     AJMP FUNC1
+001D 0129             19     AJMP FUNC2
+001F 012D             20     AJMP FUNC3
+0021 753000           21     FUNC0:MOV 30H,#0
+0024 22               22     RET
+0025 753101           23     FUNC1:MOV 31H,#1
+0028 22               24     RET
+0029 753202           25     FUNC2:MOV 32H,#2
+002C 22               26     RET
+002D 753303           27     FUNC3:MOV 33H,#3
+0030 22               28     RET
+                      29     END
+A51 MACRO ASSEMBLER  JUMP_TABLE                                                           04/29/2018 13:49:15 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+FUNC0. . . . . . .  C ADDR   0021H   A   
+FUNC1. . . . . . .  C ADDR   0025H   A   
+FUNC2. . . . . . .  C ADDR   0029H   A   
+FUNC3. . . . . . .  C ADDR   002DH   A   
+FUNCENTER. . . . .  C ADDR   0013H   A   
+FUNCTAB. . . . . .  C ADDR   0019H   A   
+START. . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  BCD                                                                  04/29/2018 12:01:16 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN BCD.OBJ
+ASSEMBLER INVOKED BY: E:\Keil\C51\BIN\A51.EXE BCD.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+  0030                 1     RESULT EQU 30H
+0000                   2     ORG 00H
+0000 020003            3     LJMP START
+0003 758140            4     START:MOV SP,#40H
+0006 747B              5     MOV A,#123
+0008 12000D            6     LCALL BINTOBAC
+000B 80FE              7           SJMP $
+000D                   8     BINTOBAC:
+000D 75F064            9     MOV B,#100
+0010 84               10               DIV AB                               ;≥“‘100µ√∞ŸŒª 
+0011 F530             11             MOV RESULT,A    
+0013 E5F0             12              MOV A,B
+0015 75F00A           13              MOV B,#10
+0018 84               14               DIV AB                        ;”‡ ≥“‘10µ√ ÆŒª 
+0019 F531             15              MOV RESULT+1,A
+001B 85F032           16               MOV RESULT+2,B               ;”‡ Œ™∏ˆŒª 
+001E 22               17              RET
+                      18              END
+A51 MACRO ASSEMBLER  BCD                                                                  04/29/2018 12:01:16 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BINTOBAC . . . . .  C ADDR   000DH   A   
+RESULT . . . . . .  N NUMB   0030H   A   
+SP . . . . . . . .  D ADDR   0081H   A   
+START. . . . . . .  C ADDR   0003H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

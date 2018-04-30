@@ -1,0 +1,51 @@
+A51 MACRO ASSEMBLER  ASCII                                                                04/29/2018 13:30:37 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN ASCII.OBJ
+ASSEMBLER INVOKED BY: E:\Keil\C51\BIN\A51.EXE ASCII.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+  0030                 1     RESULT EQU 30H
+0000                   2     ORG 00H
+0000 741A              3     START:MOV  A,#1AH
+0002 1107              4     CALL BINTOHEX
+0004 020004            5     LJMP $
+0007                   6     BINTOHEX:
+0007 90001A            7     MOV  DPTR,#ASCIITAB
+000A F5F0              8           MOV  B,A                   ;暂存A
+000C C4                9     SWAP A
+000D 540F             10           ANL  A,#0FH               ;取高四位
+000F 93               11           MOVC  A,@A+DPTR          ;查ASCII表
+0010 F530             12     MOV  RESULT, A
+0012 E5F0             13           MOV  A,B                  ;恢复A
+0014 540F             14           ANL  A,#0FH               ;取低四位
+0016 93               15           MOVC  A,@A+DPTR           ;查ASCII表
+0017 F531             16     MOV  RESULT+1,A
+0019 22               17           RET
+001A                  18     ASCIITAB:
+001A 30313233         19     DB  48,49,50,51,52,53,54,55
+001E 34353637                
+0022 38394142         20           DB  56,57,65,66,67,68,69,70           ;定义首侄杂Φ腁SCII表
+0026 43444546                
+                      21           END
+A51 MACRO ASSEMBLER  ASCII                                                                04/29/2018 13:30:37 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ASCIITAB . . . . .  C ADDR   001AH   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+BINTOHEX . . . . .  C ADDR   0007H   A   
+RESULT . . . . . .  N NUMB   0030H   A   
+START. . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

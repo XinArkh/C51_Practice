@@ -1,0 +1,70 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/29/2018  13:49:15  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL\C51\BIN\BL51.EXE jump_table.obj TO P4_程序跳转表 RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  jump_table.obj (JUMP_TABLE)
+
+
+LINK MAP OF MODULE:  P4_程序跳转表 (JUMP_TABLE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0031H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  P4_程序跳转表 (JUMP_TABLE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        JUMP_TABLE
+  D:00E0H         SYMBOL        ACC
+  C:0021H         SYMBOL        FUNC0
+  C:0025H         SYMBOL        FUNC1
+  C:0029H         SYMBOL        FUNC2
+  C:002DH         SYMBOL        FUNC3
+  C:0013H         SYMBOL        FUNCENTER
+  C:0019H         SYMBOL        FUNCTAB
+  C:0000H         SYMBOL        START
+  C:0000H         LINE#         3
+  C:0002H         LINE#         4
+  C:0004H         LINE#         5
+  C:0006H         LINE#         6
+  C:0008H         LINE#         7
+  C:000AH         LINE#         8
+  C:000CH         LINE#         9
+  C:000EH         LINE#         10
+  C:0010H         LINE#         11
+  C:0013H         LINE#         13
+  C:0015H         LINE#         14
+  C:0018H         LINE#         15
+  C:0019H         LINE#         17
+  C:001BH         LINE#         18
+  C:001DH         LINE#         19
+  C:001FH         LINE#         20
+  C:0021H         LINE#         21
+  C:0024H         LINE#         22
+  C:0025H         LINE#         23
+  C:0028H         LINE#         24
+  C:0029H         LINE#         25
+  C:002CH         LINE#         26
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/29/2018  13:49:15  PAGE 2
+
+
+  C:002DH         LINE#         27
+  C:0030H         LINE#         28
+  -------         ENDMOD        JUMP_TABLE
+
+Program Size: data=8.0 xdata=0 code=49
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

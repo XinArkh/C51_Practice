@@ -1,0 +1,22 @@
+ORG 0000H
+AJMP  START
+ORG 0100H
+START: MOV 50H,#00H
+MOV 51H,#01H
+	MOV 52H,#02H
+	MOV 53H,#03H
+	MOV 54H,#04H
+	MOV 55H,#05H
+	MOV 56H,#06H
+	MOV 57H,#07H
+	MOV 58H,#08H
+	MOV 59H,#09H
+        MOV R0,#50H    ;源地址
+        MOV R1,#60H    ;目的地址
+        MOV R2,#10
+LOOP:  MOV A,@R0
+MOV @R1,A
+INC R0
+        INC R1
+        DJNZ R2,LOOP
+        END

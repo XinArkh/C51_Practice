@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  BLOCK_MOVE                                                           04/29/2018 14:14:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN block_move.OBJ
+ASSEMBLER INVOKED BY: E:\Keil\C51\BIN\A51.EXE block_move.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 2100              2     AJMP  START
+0100                   3     ORG 0100H
+0100 755000            4     START: MOV 50H,#00H
+0103 755101            5     MOV 51H,#01H
+0106 755202            6             MOV 52H,#02H
+0109 755303            7             MOV 53H,#03H
+010C 755404            8             MOV 54H,#04H
+010F 755505            9             MOV 55H,#05H
+0112 755606           10             MOV 56H,#06H
+0115 755707           11             MOV 57H,#07H
+0118 755808           12             MOV 58H,#08H
+011B 755909           13             MOV 59H,#09H
+011E 7850             14             MOV R0,#50H    ;源地址
+0120 7960             15             MOV R1,#60H    ;目的地址
+0122 7A0A             16             MOV R2,#10
+0124 E6               17     LOOP:  MOV A,@R0
+0125 F7               18     MOV @R1,A
+0126 08               19     INC R0
+0127 09               20             INC R1
+0128 DAFA             21             DJNZ R2,LOOP
+                      22             END
+A51 MACRO ASSEMBLER  BLOCK_MOVE                                                           04/29/2018 14:14:34 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   0124H   A   
+START. . . . . . .  C ADDR   0100H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

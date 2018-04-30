@@ -1,0 +1,44 @@
+A51 MACRO ASSEMBLER  CLR                                                                  04/29/2018 11:19:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN CLR.OBJ
+ASSEMBLER INVOKED BY: E:\Keil\C51\BIN\A51.EXE CLR.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 020030            2     LJMP START
+0030                   3            ORG 0030H
+0030 753010            4     START: MOV 30H,#10H
+0033 753111            5     MOV 31H,#11H
+0036 753212            6     MOV 32H,#12H
+0039 753313            7            MOV 33H,#13H
+003C 753414            8            MOV 34H,#14H
+003F 753515            9            MOV 35H,#15H
+0042 753616           10            MOV 36H,#16H
+0045 753717           11            MOV 37H,#17H
+0048 753818           12            MOV 38H,#18H
+004B 753919           13            MOV 39H,#19H
+004E 7830             14            MOV R0,#30H
+0050 E4               15     LOOP1: CLR A
+0051 F6               16     MOV @R0,A
+0052 08               17     INC R0
+0053 B83AFA           18            CJNE R0,#3AH,LOOP1
+                      19            END
+A51 MACRO ASSEMBLER  CLR                                                                  04/29/2018 11:19:15 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP1. . . . . . .  C ADDR   0050H   A   
+START. . . . . . .  C ADDR   0030H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

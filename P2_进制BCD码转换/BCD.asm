@@ -1,0 +1,18 @@
+RESULT EQU 30H
+ORG 00H
+LJMP START
+START:MOV SP,#40H
+MOV A,#123
+LCALL BINTOBAC
+      SJMP $
+BINTOBAC:
+MOV B,#100
+	  DIV AB			       ;除以100得百位数
+	MOV RESULT,A	
+	 MOV A,B
+	 MOV B,#10
+	  DIV AB			;余数除以10得十位数
+	 MOV RESULT+1,A
+	  MOV RESULT+2,B	       ;余数为个位数
+	 RET
+	 END

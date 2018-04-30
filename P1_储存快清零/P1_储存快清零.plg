@@ -1,0 +1,14 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\DELL-\Desktop\C51_Practice\P1_储存快清零\P1_储存快清零.uvproj
+Project File Date:  04/29/2018
+
+<h2>Output:</h2>
+Build target '目标 1'
+assembling CLR.asm...
+linking...
+Program Size: data=8.0 xdata=0 code=86
+"P1_储存快清零" - 0 Error(s), 0 Warning(s).
