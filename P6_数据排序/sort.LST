@@ -1,0 +1,65 @@
+A51 MACRO ASSEMBLER  SORT                                                                 04/30/2018 21:56:25 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN sort.OBJ
+ASSEMBLER INVOKED BY: E:\Keil\C51\BIN\A51.EXE sort.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG  0000H
+0000 020100            2     LJMP  START
+0100                   3     ORG  0100H
+0100 755030            4     START:  MOV  50H,#30H
+0103 755111            5     MOV  51H,#11H
+0106 755218            6     MOV  52H,#18H
+0109 755309            7     MOV  53H,#09H
+010C 755401            8     MOV  54H,#01H
+010F 75552A            9     MOV  55H,#2AH
+0112 755636           10     MOV  56H,#36H
+0115 755717           11     MOV  57H,#17H
+0118 755828           12     MOV  58H,#28H
+011B 755979           13     MOV  59H,#79H
+011E 755AA9           14     MOV  5AH,#0A9H
+0121 7B50             15     MOV  R3,#50H
+0123 EB               16     QUE1:  MOV  A,R3          ;Ö¸ÕëËÍR0
+0124 F8               17     MOV  R0,A
+0125 7F0A             18             MOV  R7,#0AH      ;³¤¶ÈËÍR7
+0127 C200             19             CLR  00H           ;Çå±êÖ¾Î»
+0129 E6               20     MOV  A,@R0
+012A 08               21     QL2 :   INC  R0
+012B FA               22             MOV  R2,A          ;±¸·ÝAÖÐµÄÄÚÈÝ£¬ÒòÏÂÃæµÄCJNEÖÐÓÃµ½
+012C C3               23     CLR  C
+012D 8622             24     MOV  22H,@R0
+012F B52201           25             CJNE  A,22H,QL3    ;ÏàµÈÂð£¿(A)<(22)Ê±CYÖÃ1.
+0132 D3               26     SETB  C
+0133 EA               27     QL3:    MOV  A,R2
+0134 4006             28             JC  QL1            ;<=Ôò×ªQL1£¬²»ÓÃ½»»»
+0136 D200             29             SETB  00H          ;00HÎ»Îª1Ê±£¬ËµÃ÷ÓÐÊ¾Ý½»»»£¬ÈÔÒª½øÐÐÏÂÒ»ÕûÌåÑ­»·
+0138 C6               30     XCH  A,@R0
+0139 18               31     DEC  R0
+013A C6               32     XCH  A,@R0
+013B 08               33             INC  R0            ;´óÓÚ½»»»
+013C E6               34     QL1:    MOV  A,@R0       ;AÖÐµÄÄÚÈÝ×ÜÊÇºÍÏÂÒ»¸öÊ¾Ý±È½Ï
+013D DFEB             35     DJNZ  R7,QL2
+013F 2000E1           36             JB  00H,QUE1       ;Ò»´ÎÑ­»·ÖÐÓÐ½»»»¼ÌÐø
+                      37             END
+A51 MACRO ASSEMBLER  SORT                                                                 04/30/2018 21:56:25 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+QL1. . . . . . . .  C ADDR   013CH   A   
+QL2. . . . . . . .  C ADDR   012AH   A   
+QL3. . . . . . . .  C ADDR   0133H   A   
+QUE1 . . . . . . .  C ADDR   0123H   A   
+START. . . . . . .  C ADDR   0100H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
