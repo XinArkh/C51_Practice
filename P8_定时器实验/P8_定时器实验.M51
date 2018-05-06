@@ -1,0 +1,137 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/06/2018  22:29:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\KEIL\C51\BIN\BL51.EXE time.obj TO P8_定时器实验 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  time.obj (TIME)
+  E:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  P8_定时器实验 (TIME)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         ?DT?TIME
+            IDATA   000BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0011H     UNIT         ?CO?TIME
+            CODE    0014H     0004H     UNIT         ?C_INITSEG
+                    0018H     0003H                  *** GAP ***
+            CODE    001BH     0003H     ABSOLUTE     
+            CODE    001EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    00AAH     0047H     UNIT         ?PR?TIMER1?TIME
+            CODE    00F1H     0010H     UNIT         ?PR?TIMER1INIT?TIME
+            CODE    0101H     000BH     UNIT         ?PR?MAIN?TIME
+
+
+
+OVERLAY MAP OF MODULE:   P8_定时器实验 (TIME)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?TIMER1?TIME
+  +--> ?CO?TIME
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?TIME
+  +--> ?C_INITSEG
+
+?PR?MAIN?TIME
+  +--> ?PR?TIMER1INIT?TIME
+
+
+
+SYMBOL TABLE OF MODULE:  P8_定时器实验 (TIME)
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/06/2018  22:29:33  PAGE 2
+
+
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TIME
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0101H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  C:00AAH         PUBLIC        Timer1
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A8H.3       PUBLIC        ET1
+  C:00F1H         PUBLIC        Timer1Init
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  B:00A0H.2       PUBLIC        LSA
+  B:00A0H.3       PUBLIC        LSB
+  B:00A0H.4       PUBLIC        LSC
+  D:00C8H         PUBLIC        T2CON
+  D:000AH         PUBLIC        n
+  C:0003H         PUBLIC        smgduan
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          TIMER1INIT
+  C:00F1H         LINE#         19
+  C:00F1H         LINE#         20
+  C:00F1H         LINE#         21
+  C:00F4H         LINE#         23
+  C:00F7H         LINE#         24
+  C:00FAH         LINE#         25
+  C:00FCH         LINE#         26
+  C:00FEH         LINE#         27
+  C:0100H         LINE#         28
+  -------         ENDPROC       TIMER1INIT
+  -------         PROC          MAIN
+  C:0101H         LINE#         36
+  C:0101H         LINE#         37
+  C:0101H         LINE#         38
+  C:0103H         LINE#         39
+  C:0105H         LINE#         40
+  C:0107H         LINE#         41
+  C:010AH         LINE#         42
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER1
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:00AAH         LINE#         51
+  C:00B7H         LINE#         54
+  C:00BAH         LINE#         55
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/06/2018  22:29:33  PAGE 3
+
+
+  C:00BDH         LINE#         56
+  C:00C5H         LINE#         57
+  C:00CDH         LINE#         58
+  C:00CDH         LINE#         59
+  C:00D3H         LINE#         60
+  C:00DEH         LINE#         61
+  C:00E6H         LINE#         62
+  C:00E6H         LINE#         63
+  -------         ENDPROC       TIMER1
+  -------         ENDMOD        TIME
+
+Program Size: data=12.0 xdata=0 code=265
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
