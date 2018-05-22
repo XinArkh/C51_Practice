@@ -15,6 +15,7 @@ TIME:             September 2010
 #define Dec   (P3_bit.P3_5)
 #define Dir   (P3_bit.P3_6) 
 #define PWM   (P3_bit.P3_7)
+#define ctr   (P0_bit.P0_7)
 
 // Define new types
 typedef unsigned char   uchar;
@@ -25,20 +26,22 @@ void delay(uint);
 void main(void)
  { int speed;
    // Select initial direction and speed.
-   Dir = 0;
-   if (Dir)
-      speed = 400;
-   else
-      speed = 100;
+   Dir = 1;
+   speed = 250;
+   ctr = 1;
    
    // Main control loop
    while(1)
-    { if(!Inc)
+    { if(!Inc){
       // Increase speed   
          speed = speed > 0 ? speed - 1 : 0;
-      if(!Dec)
+		ctr=1;
+		delay(2000);}
+      if(!Dec){
       // Decrease speed
          speed = speed < 500 ? speed + 1 : 500;
+	  ctr=0;
+		delay(2000);}
       
       // Drive a PWM signal out. 
       PWM=1;
