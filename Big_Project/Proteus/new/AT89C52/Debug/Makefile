@@ -17,9 +17,9 @@ LDFLAGS=-Fubrof8 -I"E:/IAR Systems/Embedded Workbench 8.0/8051/bin/../CONFIG/" -
 CC=icc8051.exe
 LD=xlink.exe
 ASM=a8051.exe
-#  C:/Users/DELL-/Desktop/C51_Practice/new/AT89C52/Debug/Debug.ubf: TOOL=LD
-#     C:/Users/DELL-/Desktop/C51_Practice/new/AT89C52/Debug/main.r51: TOOL=CC
-#        C:/Users/DELL-/Desktop/C51_Practice/new/AT89C52/main.c
+#  C:/Users/DELL-/Desktop/C51_Practice/Big_Project/new/AT89C52/Debug/Debug.ubf: TOOL=LD
+#     C:/Users/DELL-/Desktop/C51_Practice/Big_Project/new/AT89C52/Debug/main.r51: TOOL=CC
+#        C:/Users/DELL-/Desktop/C51_Practice/Big_Project/new/AT89C52/main.c
 
 # Build tree:
 all:	Debug
