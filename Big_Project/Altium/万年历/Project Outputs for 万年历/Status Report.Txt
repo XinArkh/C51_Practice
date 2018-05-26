@@ -1,0 +1,10 @@
+Output: WEBENCH Simulation Engine
+Type  : WBSENetlist
+From  : Project [万年历.PrjPcb]
+   Generated File[万年历.nti]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 14:26:19 On 2015/12/22 星期二

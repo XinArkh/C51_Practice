@@ -1,0 +1,4 @@
+Added Component: Designator=XTA1(CRYSTAL)
+Added Pin To Net: NetName=XT1 Pin=XTA1-1
+Added Pin To Net: NetName=XT2 Pin=XTA1-2
+Added Member To Class: ClassName=‘≠¿ÌÕº Member=Component XTA1 12MHz

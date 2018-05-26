@@ -1,0 +1,9 @@
+Added Component: Designator=S1(key-6)
+Added Component: Designator=S9(key-6)
+Added Pin To Net: NetName=+5 Pin=S1-1
+Added Pin To Net: NetName=A Pin=S1-2
+Added Pin To Net: NetName=GND Pin=S9-1
+Added Pin To Net: NetName=NetJP4_20 Pin=S9-2
+Added Member To Class: ClassName=万年历原理图 Member=Component S1 按键
+Added Member To Class: ClassName=万年历原理图 Member=Component S9 按键
+Added Room: Name=万年历原理图
