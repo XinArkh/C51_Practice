@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=P32 Pin=IR1-1
+Removed Pin From Net: NetName=VCC Pin=IR1-3
+Added Component: Designator=M1(MOTOR)
+Added Pin To Net: NetName=VCC Pin=IR1-1
+Added Pin To Net: NetName=P32 Pin=IR1-3
+Added Pin To Net: NetName=NetM1_1 Pin=M1-1
+Added Pin To Net: NetName=NetM1_2 Pin=M1-2
+Added Member To Class: ClassName=原理图 Member=Component M1 MOTOR
+Added Room: Name=原理图

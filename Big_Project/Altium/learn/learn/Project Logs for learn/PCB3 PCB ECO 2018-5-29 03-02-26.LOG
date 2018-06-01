@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=P22 Pin=U1-3
+Removed Pin From Net: NetName=P23 Pin=U1-6
+Removed Pin From Net: NetName=TMP2 Pin=U1-11
+Removed Pin From Net: NetName=TMP1 Pin=U1-14
+Change Component Designator: OldDesignator=DEC NewDesignator=S1
+Change Component Designator: OldDesignator=DIR1 NewDesignator=S2
+Change Component Designator: OldDesignator=DIR2 NewDesignator=S4
+Change Component Designator: OldDesignator=INC NewDesignator=S5
+Change Component Designator: OldDesignator=SRT NewDesignator=S3
+Added Pin To Net: NetName=P23 Pin=U1-3
+Added Pin To Net: NetName=P22 Pin=U1-6
+Added Pin To Net: NetName=TMP1 Pin=U1-11
+Added Pin To Net: NetName=TMP2 Pin=U1-14

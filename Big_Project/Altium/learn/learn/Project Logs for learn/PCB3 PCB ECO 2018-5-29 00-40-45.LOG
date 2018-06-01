@@ -1,0 +1,6 @@
+Added Component: Designator=Q9(PINS-3)
+Added Pin To Net: NetName=NetBEEP1_2 Pin=Q9-1
+Added Pin To Net: NetName=NetQ9_2 Pin=Q9-2
+Added Pin To Net: NetName=GND Pin=Q9-3
+Added Member To Class: ClassName=原理图 Member=Component Q9 9012
+Added Room: Name=原理图

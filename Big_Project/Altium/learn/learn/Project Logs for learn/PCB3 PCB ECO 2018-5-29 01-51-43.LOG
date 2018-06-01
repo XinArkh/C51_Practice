@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=原理图 Member=M1
+Added Component: Designator=M(MOTOR)
+Added Pin To Net: NetName=NetM_1 Pin=Q3-3
+Added Pin To Net: NetName=NetM_1 Pin=Q8-1
+Added Net: Name=NetM_1
+Added Pin To Net: NetName=NetM_2 Pin=Q4-3
+Added Pin To Net: NetName=NetM_2 Pin=Q7-1
+Added Net: Name=NetM_2
+Added Member To Class: ClassName=原理图 Member=Component M MOTOR

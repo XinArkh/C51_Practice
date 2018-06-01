@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=P32 Pin=IR1-1
+Removed Pin From Net: NetName=VCC Pin=IR1-3
+Removed Pin From Net: NetName=P23 Pin=U1-3
+Removed Pin From Net: NetName=P22 Pin=U1-6
+Change Component Comment : Designator=SCR1 Old Comment=LCD1602 New Comment=LCD
+Added Pin To Net: NetName=VCC Pin=IR1-1
+Added Pin To Net: NetName=P32 Pin=IR1-3
+Added Pin To Net: NetName=P22 Pin=U1-3
+Added Pin To Net: NetName=P23 Pin=U1-6
+Added Pin To Net: NetName=NetM1_1 Pin=Q3-3
+Added Pin To Net: NetName=NetM1_1 Pin=Q8-1
+Added Net: Name=NetM1_1
+Added Pin To Net: NetName=NetM1_2 Pin=Q4-3
+Added Pin To Net: NetName=NetM1_2 Pin=Q7-1
+Added Net: Name=NetM1_2
+Added Pin To Net: NetName=TMP1 Pin=JDQ1-5
+Added Pin To Net: NetName=TMP1 Pin=U1-14
+Added Net: Name=TMP1
+Added Pin To Net: NetName=TMP2 Pin=JDQ2-5
+Added Pin To Net: NetName=TMP2 Pin=U1-11
+Added Net: Name=TMP2
+Added Room: Name=‘≠¿ÌÕº

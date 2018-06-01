@@ -1,0 +1,10 @@
+Output: Report Single Pin Nets
+Type  : SinglePinNetReporter
+From  : Variant [[No Variations]] of Project [learn.PrjPcb]
+   Generated File[learn.REP]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 01:57:47 On 2018/5/29

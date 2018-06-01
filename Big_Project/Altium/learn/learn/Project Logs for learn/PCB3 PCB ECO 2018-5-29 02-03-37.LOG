@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VCC Pin=IR1-1
+Removed Pin From Net: NetName=P32 Pin=IR1-3
+Added Pin To Net: NetName=P32 Pin=IR1-1
+Added Pin To Net: NetName=VCC Pin=IR1-3
