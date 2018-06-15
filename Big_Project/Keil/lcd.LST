@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   LCD                                                               06/15/2018 22:28:26 PAGE 1   
+C51 COMPILER V9.52.0.0   LCD                                                               06/15/2018 22:31:56 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE LCD
@@ -62,7 +62,7 @@ line level    source
   53   1      
   54   1              LCD1602_E = 1;   //写入时序
   55   1              Lcd1602_Delay1ms(5);
-C51 COMPILER V9.52.0.0   LCD                                                               06/15/2018 22:28:26 PAGE 2   
+C51 COMPILER V9.52.0.0   LCD                                                               06/15/2018 22:31:56 PAGE 2   
 
   56   1              LCD1602_E = 0;
   57   1      
@@ -126,7 +126,7 @@ line level    source
               void LcdInit()                                            //LCD初始化子程序
               {
                       LcdWriteCom(0x38);  //开显示
-C51 COMPILER V9.52.0.0   LCD                                                               06/15/2018 22:28:26 PAGE 3   
+C51 COMPILER V9.52.0.0   LCD                                                               06/15/2018 22:31:56 PAGE 3   
 
                       LcdWriteCom(0x0c);  //开显示不显示光标
                       LcdWriteCom(0x06);  //写一个指针加1

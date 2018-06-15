@@ -1,21 +1,21 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        06/15/2018  22:28:26  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/15/2018  22:31:56  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-E:\KEIL\C51\BIN\BL51.EXE main.obj, lcd.obj TO project RAMSIZE (256)
+E:\KEIL\C51\BIN\BL51.EXE lcd.obj, main.obj TO learn RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
 
 
 INPUT MODULES INCLUDED:
-  main.obj (MAIN)
   lcd.obj (LCD)
+  main.obj (MAIN)
   E:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
   E:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
 
 
-LINK MAP OF MODULE:  project (MAIN)
+LINK MAP OF MODULE:  learn (LCD)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -39,7 +39,7 @@ LINK MAP OF MODULE:  project (MAIN)
 
 
 
-OVERLAY MAP OF MODULE:   project (MAIN)
+OVERLAY MAP OF MODULE:   learn (LCD)
 
 
 SEGMENT                             DATA_GROUP 
@@ -59,7 +59,7 @@ SEGMENT                             DATA_GROUP
   +--> ?PR?_LCDWRITECOM?LCD
 
 ?PR?_LCDWRITECOM?LCD              -----    -----
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2018  22:28:26  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2018  22:31:56  PAGE 2
 
 
   +--> ?PR?_LCD1602_DELAY1MS?LCD
@@ -69,59 +69,10 @@ SEGMENT                             DATA_GROUP
 
 
 
-SYMBOL TABLE OF MODULE:  project (MAIN)
+SYMBOL TABLE OF MODULE:  learn (LCD)
 
   VALUE           TYPE          NAME
   ----------------------------------
-
-  -------         MODULE        MAIN
-  C:0000H         SYMBOL        _ICE_DUMMY_
-  D:0090H         PUBLIC        P1
-  D:00A0H         PUBLIC        P2
-  D:00B0H         PUBLIC        P3
-  D:00A8H         PUBLIC        IE
-  D:00B8H         PUBLIC        IP
-  C:008FH         PUBLIC        main
-  D:0098H         PUBLIC        SCON
-  D:0088H         PUBLIC        TCON
-  D:0008H         PUBLIC        Disp1
-  D:0019H         PUBLIC        Disp2
-  D:00C8H         PUBLIC        T2CON
-  D:00D0H         PUBLIC        PSW
-  -------         PROC          MAIN
-  -------         DO            
-  D:002AH         SYMBOL        i
-  -------         ENDDO         
-  C:008FH         LINE#         22
-  C:008FH         LINE#         23
-  C:008FH         LINE#         25
-  C:0092H         LINE#         26
-  C:0095H         LINE#         27
-  C:0095H         LINE#         28
-  C:009FH         LINE#         29
-  C:00A8H         LINE#         30
-  C:00ADH         LINE#         31
-  C:00B0H         LINE#         32
-  C:00B0H         LINE#         33
-  C:00BAH         LINE#         34
-  C:00C3H         LINE#         35
-  C:00CAH         LINE#         37
-  C:00CFH         LINE#         38
-  C:00D2H         LINE#         39
-  C:00D2H         LINE#         40
-  C:00DCH         LINE#         41
-  C:00E5H         LINE#         43
-  C:00ECH         LINE#         44
-  C:00F1H         LINE#         45
-  C:00F4H         LINE#         46
-  C:00F4H         LINE#         47
-  C:00FEH         LINE#         48
-  C:0107H         LINE#         50
-  -------         ENDPROC       MAIN
-  -------         ENDMOD        MAIN
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2018  22:28:26  PAGE 3
-
-
 
   -------         MODULE        LCD
   C:0000H         SYMBOL        _ICE_DUMMY_
@@ -168,6 +119,9 @@ SYMBOL TABLE OF MODULE:  project (MAIN)
   C:0192H         LINE#         47
   C:0194H         LINE#         48
   C:0196H         LINE#         49
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2018  22:31:56  PAGE 3
+
+
   C:0196H         LINE#         51
   C:0196H         LINE#         52
   C:0196H         LINE#         54
@@ -179,9 +133,6 @@ SYMBOL TABLE OF MODULE:  project (MAIN)
   C:0196H         LINE#         62
   C:0199H         LINE#         63
   C:019BH         LINE#         64
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2018  22:28:26  PAGE 4
-
-
   -------         ENDPROC       _LCDWRITECOM
   -------         PROC          _LCDWRITEDATA
   D:0003H         SYMBOL        dat
@@ -213,6 +164,55 @@ SYMBOL TABLE OF MODULE:  project (MAIN)
   C:018BH         LINE#         131
   -------         ENDPROC       LCDINIT
   -------         ENDMOD        LCD
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:008FH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:0008H         PUBLIC        Disp1
+  D:0019H         PUBLIC        Disp2
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2018  22:31:56  PAGE 4
+
+
+  -------         PROC          MAIN
+  -------         DO            
+  D:002AH         SYMBOL        i
+  -------         ENDDO         
+  C:008FH         LINE#         22
+  C:008FH         LINE#         23
+  C:008FH         LINE#         25
+  C:0092H         LINE#         26
+  C:0095H         LINE#         27
+  C:0095H         LINE#         28
+  C:009FH         LINE#         29
+  C:00A8H         LINE#         30
+  C:00ADH         LINE#         31
+  C:00B0H         LINE#         32
+  C:00B0H         LINE#         33
+  C:00BAH         LINE#         34
+  C:00C3H         LINE#         35
+  C:00CAH         LINE#         37
+  C:00CFH         LINE#         38
+  C:00D2H         LINE#         39
+  C:00D2H         LINE#         40
+  C:00DCH         LINE#         41
+  C:00E5H         LINE#         43
+  C:00ECH         LINE#         44
+  C:00F1H         LINE#         45
+  C:00F4H         LINE#         46
+  C:00F4H         LINE#         47
+  C:00FEH         LINE#         48
+  C:0107H         LINE#         50
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
 
 Program Size: data=44.0 xdata=0 code=424
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

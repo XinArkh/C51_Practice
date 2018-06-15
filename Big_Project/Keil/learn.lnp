@@ -1,0 +1,4 @@
+"lcd.obj",
+"main.obj" 
+TO "learn" 
+RAMSIZE(256) 
