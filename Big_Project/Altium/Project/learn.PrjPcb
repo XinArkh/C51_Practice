@@ -56,23 +56,6 @@ GenerateClassCluster=0
 DocumentUniqueId=AMHFCCUS
 
 [Document2]
-DocumentPath=PCB.PcbDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=IIOIHSIE
-
-[Document3]
 DocumentPath=PCBø‚.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -89,7 +72,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JYLVKWBS
 
-[Document4]
+[Document3]
 DocumentPath=‘≠¿ÌÕºø‚.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -106,7 +89,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KWTBQBJR
 
-[Document5]
+[Document4]
 DocumentPath=PCB1.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -123,7 +106,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PAQVOPUS
 
-[Document6]
+[Document5]
 DocumentPath=PCB2.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -139,6 +122,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VJKKPTTX
+
+[Document6]
+DocumentPath=Project_PCB.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=NAUEJJFE
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for learn\Design Rule Check - PCB.html
