@@ -97,5 +97,6 @@ void ReadIr() interrupt 0
 			}
 		}
 		Command = smgduan[IrValue[2]%16];
+		return;
 	}			
 }
