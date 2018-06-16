@@ -24,11 +24,9 @@ sbit IRIN=P3^2;
 /**********************************
 函数声明
 **********************************/
-/*延时函数，i=1时，大约延时10us*/
-void delay(uint i);
-/*读取红外数值的中断函数*/
-//void ReadIr() interrupt 0 ;
 /*初始化红外线接收*/		
-void IrInit();						  
+void IrInit();
+/*延时函数，i=1时，大约延时10us*/
+void delay(uint i);						  
 
 #endif
