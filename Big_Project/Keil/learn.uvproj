@@ -356,6 +356,11 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>ir.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ir.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
