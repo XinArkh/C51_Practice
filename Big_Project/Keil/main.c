@@ -37,7 +37,7 @@ void main(void)
 		beep = 1;
 		if(Command == '0'){
 			//beep = 0;
-			delay(10);
+			//delay(10);
 			LcdWriteCom(0x80+0x40);
 			for(i=0;i<16;i++)
 			{

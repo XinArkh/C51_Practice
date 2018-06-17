@@ -46,7 +46,6 @@ void ReadIr() interrupt 0
 	uint err;
 	Time=0;				 
 	delay(700);	//7ms	
-	//flag = 1;
 	if(IRIN==0)		//确认是否真的接收到正确的信号
 	{	 
 		err=1000;				//1000*10us=10ms,超过说明接收到错误的信号
@@ -97,6 +96,5 @@ void ReadIr() interrupt 0
 			}
 		}
 		Command = smgduan[IrValue[2]%16];
-		return;
 	}			
 }
