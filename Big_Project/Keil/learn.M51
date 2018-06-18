@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        06/18/2018  22:00:33  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/18/2018  22:07:45  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -36,22 +36,22 @@ LINK MAP OF MODULE:  learn (LCD)
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
             CODE    0003H     0003H     ABSOLUTE     
-            CODE    0006H     017DH     UNIT         ?PR?MAIN?MAIN
-            CODE    0183H     0108H     UNIT         ?PR?READIR?IR
-            CODE    028BH     00A0H     UNIT         ?C_INITSEG
-            CODE    032BH     008CH     UNIT         ?C_C51STARTUP
-            CODE    03B7H     0045H     UNIT         ?PR?_LCDDISP?MAIN
-            CODE    03FCH     002DH     UNIT         ?C?LIB_CODE
-            CODE    0429H     002AH     UNIT         ?PR?_LCD1602_DELAY1MS?LCD
-            CODE    0453H     0019H     UNIT         ?PR?LCDINIT?LCD
-            CODE    046CH     0010H     UNIT         ?CO?IR
-            CODE    047CH     000FH     UNIT         ?PR?_DELAY?IR
-            CODE    048BH     000CH     UNIT         ?PR?INIT?MAIN
-            CODE    0497H     000BH     UNIT         ?PR?BTINIT?BUTTONS
-            CODE    04A2H     000AH     UNIT         ?PR?_LCDWRITECOM?LCD
-            CODE    04ACH     000AH     UNIT         ?PR?_LCDWRITEDATA?LCD
-            CODE    04B6H     0009H     UNIT         ?PR?IRINIT?IR
-            CODE    04BFH     0005H     UNIT         ?PR?CTRLINIT?MAIN
+            CODE    0006H     0197H     UNIT         ?PR?MAIN?MAIN
+            CODE    019DH     0108H     UNIT         ?PR?READIR?IR
+            CODE    02A5H     00A0H     UNIT         ?C_INITSEG
+            CODE    0345H     008CH     UNIT         ?C_C51STARTUP
+            CODE    03D1H     0045H     UNIT         ?PR?_LCDDISP?MAIN
+            CODE    0416H     002DH     UNIT         ?C?LIB_CODE
+            CODE    0443H     002AH     UNIT         ?PR?_LCD1602_DELAY1MS?LCD
+            CODE    046DH     0019H     UNIT         ?PR?LCDINIT?LCD
+            CODE    0486H     0010H     UNIT         ?CO?IR
+            CODE    0496H     000FH     UNIT         ?PR?_DELAY?IR
+            CODE    04A5H     000CH     UNIT         ?PR?INIT?MAIN
+            CODE    04B1H     000BH     UNIT         ?PR?BTINIT?BUTTONS
+            CODE    04BCH     000AH     UNIT         ?PR?_LCDWRITECOM?LCD
+            CODE    04C6H     000AH     UNIT         ?PR?_LCDWRITEDATA?LCD
+            CODE    04D0H     0009H     UNIT         ?PR?IRINIT?IR
+            CODE    04D9H     0005H     UNIT         ?PR?CTRLINIT?MAIN
 
 
 
@@ -59,7 +59,7 @@ OVERLAY MAP OF MODULE:   learn (LCD)
 
 
 SEGMENT                             XDATA_GROUP
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 2
 
 
   +--> CALLED SEGMENT             START    LENGTH
@@ -115,28 +115,28 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:04ACH         PUBLIC        _LcdWriteData
+  C:04C6H         PUBLIC        _LcdWriteData
   B:00A0H.6       PUBLIC        LCD1602_RS
   B:00A0H.5       PUBLIC        LCD1602_RW
-  C:0453H         PUBLIC        LcdInit
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 3
+  C:046DH         PUBLIC        LcdInit
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 3
 
 
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   B:00A0H.7       PUBLIC        LCD1602_E
-  C:04A2H         PUBLIC        _LcdWriteCom
-  C:043AH         PUBLIC        _Lcd1602_Delay1ms
+  C:04BCH         PUBLIC        _LcdWriteCom
+  C:0454H         PUBLIC        _Lcd1602_Delay1ms
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          LCDINIT
-  C:0453H         LINE#         9
-  C:0453H         LINE#         10
-  C:0453H         LINE#         11
-  C:0458H         LINE#         12
-  C:045DH         LINE#         13
-  C:0462H         LINE#         14
-  C:0467H         LINE#         15
+  C:046DH         LINE#         9
+  C:046DH         LINE#         10
+  C:046DH         LINE#         11
+  C:0472H         LINE#         12
+  C:0477H         LINE#         13
+  C:047CH         LINE#         14
+  C:0481H         LINE#         15
   -------         ENDPROC       LCDINIT
   -------         PROC          L?0015
   -------         ENDPROC       L?0015
@@ -146,47 +146,47 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   D:0004H         SYMBOL        a
   D:0005H         SYMBOL        b
   -------         ENDDO         
-  C:043AH         LINE#         25
-  C:043AH         LINE#         26
-  C:043AH         LINE#         28
-  C:0443H         LINE#         29
-  C:0443H         LINE#         30
-  C:0445H         LINE#         31
-  C:0445H         LINE#         32
-  C:0449H         LINE#         33
-  C:044BH         LINE#         34
-  C:0452H         LINE#         36
+  C:0454H         LINE#         25
+  C:0454H         LINE#         26
+  C:0454H         LINE#         28
+  C:045DH         LINE#         29
+  C:045DH         LINE#         30
+  C:045FH         LINE#         31
+  C:045FH         LINE#         32
+  C:0463H         LINE#         33
+  C:0465H         LINE#         34
+  C:046CH         LINE#         36
   -------         ENDPROC       _LCD1602_DELAY1MS
   -------         PROC          _LCDWRITECOM
   D:0007H         SYMBOL        com
-  C:04A2H         LINE#         44
-  C:04A2H         LINE#         45
-  C:04A2H         LINE#         46
-  C:04A4H         LINE#         47
-  C:04A6H         LINE#         48
-  C:04A6H         LINE#         50
-  C:04A6H         LINE#         51
-  C:04A6H         LINE#         53
-  C:04A6H         LINE#         54
-  C:04A9H         LINE#         55
-  C:04ABH         LINE#         56
+  C:04BCH         LINE#         44
+  C:04BCH         LINE#         45
+  C:04BCH         LINE#         46
+  C:04BEH         LINE#         47
+  C:04C0H         LINE#         48
+  C:04C0H         LINE#         50
+  C:04C0H         LINE#         51
+  C:04C0H         LINE#         53
+  C:04C0H         LINE#         54
+  C:04C3H         LINE#         55
+  C:04C5H         LINE#         56
   -------         ENDPROC       _LCDWRITECOM
   -------         PROC          _LCDWRITEDATA
   D:0007H         SYMBOL        dat
-  C:04ACH         LINE#         64
-  C:04ACH         LINE#         65
-  C:04ACH         LINE#         66
-  C:04AEH         LINE#         67
-  C:04B0H         LINE#         68
-  C:04B0H         LINE#         70
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 4
+  C:04C6H         LINE#         64
+  C:04C6H         LINE#         65
+  C:04C6H         LINE#         66
+  C:04C8H         LINE#         67
+  C:04CAH         LINE#         68
+  C:04CAH         LINE#         70
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 4
 
 
-  C:04B0H         LINE#         71
-  C:04B0H         LINE#         73
-  C:04B0H         LINE#         74
-  C:04B3H         LINE#         75
-  C:04B5H         LINE#         76
+  C:04CAH         LINE#         71
+  C:04CAH         LINE#         73
+  C:04CAH         LINE#         74
+  C:04CDH         LINE#         75
+  C:04CFH         LINE#         76
   -------         ENDPROC       _LCDWRITEDATA
   -------         ENDMOD        LCD
 
@@ -198,16 +198,16 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
   B:00B0H.5       PUBLIC        START
-  C:048BH         PUBLIC        Init
+  C:04A5H         PUBLIC        Init
   D:00B8H         PUBLIC        IP
   B:00A0H.4       PUBLIC        beep
   B:00A0H.3       PUBLIC        Dir
   X:0000H         PUBLIC        high
   B:00B0H.3       PUBLIC        UP
   C:0006H         PUBLIC        main
-  C:03B7H         PUBLIC        _LcdDisp
+  C:03D1H         PUBLIC        _LcdDisp
   B:00B0H.6       PUBLIC        LEFT
-  C:04BFH         PUBLIC        CtrlInit
+  C:04D9H         PUBLIC        CtrlInit
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   B:00B0H.7       PUBLIC        DOWN
@@ -239,7 +239,7 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   C:002FH         LINE#         54
   C:0038H         LINE#         57
   C:0038H         LINE#         58
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 5
 
 
   C:003AH         LINE#         60
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   C:0117H         LINE#         121
   C:0117H         LINE#         122
   C:0119H         LINE#         123
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 6
 
 
   C:0119H         LINE#         124
@@ -322,82 +322,84 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   C:0160H         LINE#         144
   C:0174H         LINE#         145
   C:0177H         LINE#         146
-  C:0177H         LINE#         147
-  C:0179H         LINE#         148
-  C:0180H         LINE#         149
-  C:0180H         LINE#         150
+  C:0177H         LINE#         149
+  C:0179H         LINE#         150
+  C:0184H         LINE#         151
+  C:0186H         LINE#         152
+  C:019AH         LINE#         153
+  C:019AH         LINE#         154
   -------         ENDPROC       MAIN
   -------         PROC          INIT
-  C:048BH         LINE#         153
-  C:048BH         LINE#         154
-  C:048EH         LINE#         155
-  C:0491H         LINE#         156
-  C:0494H         LINE#         157
+  C:04A5H         LINE#         157
+  C:04A5H         LINE#         158
+  C:04A8H         LINE#         159
+  C:04ABH         LINE#         160
+  C:04AEH         LINE#         161
   -------         ENDPROC       INIT
   -------         PROC          CTRLINIT
-  C:04BFH         LINE#         160
-  C:04BFH         LINE#         161
-  C:04C1H         LINE#         162
-  C:04C3H         LINE#         163
+  C:04D9H         LINE#         164
+  C:04D9H         LINE#         165
+  C:04DBH         LINE#         166
+  C:04DDH         LINE#         167
   -------         ENDPROC       CTRLINIT
   -------         PROC          _LCDDISP
   X:0086H         SYMBOL        dat
   -------         DO            
   X:0089H         SYMBOL        i
   -------         ENDDO         
-  C:03B7H         LINE#         165
-  C:03C2H         LINE#         166
-  C:03C2H         LINE#         168
-  C:03C7H         LINE#         169
-  C:03D6H         LINE#         170
-  C:03D6H         LINE#         171
-  C:03EDH         LINE#         172
-  C:03F5H         LINE#         173
+  C:03D1H         LINE#         169
+  C:03DCH         LINE#         170
+  C:03DCH         LINE#         172
+  C:03E1H         LINE#         173
+  C:03F0H         LINE#         174
+  C:03F0H         LINE#         175
+  C:0407H         LINE#         176
+  C:040FH         LINE#         177
   -------         ENDPROC       _LCDDISP
   -------         ENDMOD        MAIN
 
   -------         MODULE        IR
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 7
+
+
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 7
-
-
   D:00B0H         PUBLIC        P3
   B:00A8H.7       PUBLIC        EA
   D:00A8H         PUBLIC        IE
   X:007EH         PUBLIC        Time
-  C:0480H         PUBLIC        _delay
+  C:049AH         PUBLIC        _delay
   D:00B8H         PUBLIC        IP
   B:00B0H.2       PUBLIC        IRIN
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0183H         PUBLIC        ReadIr
+  C:019DH         PUBLIC        ReadIr
   X:007FH         PUBLIC        IrValue
   B:00A8H.0       PUBLIC        EX0
   B:0088H.0       PUBLIC        IT0
-  C:04B6H         PUBLIC        IrInit
+  C:04D0H         PUBLIC        IrInit
   D:00C8H         PUBLIC        T2CON
-  C:046CH         PUBLIC        smgduan
+  C:0486H         PUBLIC        smgduan
   D:00D0H         PUBLIC        PSW
   -------         PROC          IRINIT
-  C:04B6H         LINE#         19
-  C:04B6H         LINE#         20
-  C:04B6H         LINE#         21
-  C:04B8H         LINE#         22
-  C:04BAH         LINE#         23
-  C:04BCH         LINE#         25
-  C:04BEH         LINE#         26
+  C:04D0H         LINE#         19
+  C:04D0H         LINE#         20
+  C:04D0H         LINE#         21
+  C:04D2H         LINE#         22
+  C:04D4H         LINE#         23
+  C:04D6H         LINE#         25
+  C:04D8H         LINE#         26
   -------         ENDPROC       IRINIT
-  C:047CH         SYMBOL        L?0030
+  C:0496H         SYMBOL        L?0030
   -------         PROC          L?0029
   -------         ENDPROC       L?0029
-  C:047CH         SYMBOL        L?0030
+  C:0496H         SYMBOL        L?0030
   -------         PROC          _DELAY
   D:0006H         SYMBOL        i
-  C:0480H         LINE#         32
-  C:0480H         LINE#         33
-  C:0480H         LINE#         34
-  C:048AH         LINE#         35
+  C:049AH         LINE#         32
+  C:049AH         LINE#         33
+  C:049AH         LINE#         34
+  C:04A4H         LINE#         35
   -------         ENDPROC       _DELAY
   -------         PROC          READIR
   -------         DO            
@@ -405,59 +407,59 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   D:0005H         SYMBOL        k
   D:0002H         SYMBOL        err
   -------         ENDDO         
-  C:0183H         LINE#         43
-  C:019CH         LINE#         47
-  C:01A1H         LINE#         48
-  C:01A8H         LINE#         49
-  C:01AEH         LINE#         50
-  C:01AEH         LINE#         51
-  C:01B2H         LINE#         54
-  C:01BEH         LINE#         55
-  C:01BEH         LINE#         56
-  C:01C1H         LINE#         57
-  C:01C6H         LINE#         58
-  C:01C8H         LINE#         59
-  C:01CEH         LINE#         60
-  C:01CEH         LINE#         61
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 8
+  C:019DH         LINE#         43
+  C:01B6H         LINE#         47
+  C:01BBH         LINE#         48
+  C:01C2H         LINE#         49
+  C:01C8H         LINE#         50
+  C:01C8H         LINE#         51
+  C:01CCH         LINE#         54
+  C:01D8H         LINE#         55
+  C:01D8H         LINE#         56
+  C:01DBH         LINE#         57
+  C:01E0H         LINE#         58
+  C:01E2H         LINE#         59
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 8
 
 
-  C:01D2H         LINE#         62
-  C:01DEH         LINE#         63
-  C:01DEH         LINE#         64
-  C:01E1H         LINE#         65
-  C:01E6H         LINE#         66
-  C:01E8H         LINE#         67
-  C:01EAH         LINE#         68
-  C:01EAH         LINE#         69
-  C:01ECH         LINE#         70
-  C:01ECH         LINE#         72
-  C:01F0H         LINE#         73
-  C:01FCH         LINE#         74
-  C:01FCH         LINE#         75
-  C:01FFH         LINE#         76
-  C:0204H         LINE#         77
-  C:0206H         LINE#         78
-  C:020AH         LINE#         79
-  C:0216H         LINE#         80
-  C:0216H         LINE#         81
-  C:021DH         LINE#         82
-  C:0223H         LINE#         83
-  C:0228H         LINE#         84
-  C:022EH         LINE#         85
-  C:0230H         LINE#         87
-  C:0230H         LINE#         89
-  C:023EH         LINE#         90
-  C:0247H         LINE#         91
-  C:0247H         LINE#         92
-  C:0255H         LINE#         93
-  C:0255H         LINE#         94
-  C:025AH         LINE#         95
-  C:0260H         LINE#         96
-  C:0266H         LINE#         97
-  C:0266H         LINE#         98
-  C:0274H         LINE#         99
-  C:0274H         LINE#         100
+  C:01E8H         LINE#         60
+  C:01E8H         LINE#         61
+  C:01ECH         LINE#         62
+  C:01F8H         LINE#         63
+  C:01F8H         LINE#         64
+  C:01FBH         LINE#         65
+  C:0200H         LINE#         66
+  C:0202H         LINE#         67
+  C:0204H         LINE#         68
+  C:0204H         LINE#         69
+  C:0206H         LINE#         70
+  C:0206H         LINE#         72
+  C:020AH         LINE#         73
+  C:0216H         LINE#         74
+  C:0216H         LINE#         75
+  C:0219H         LINE#         76
+  C:021EH         LINE#         77
+  C:0220H         LINE#         78
+  C:0224H         LINE#         79
+  C:0230H         LINE#         80
+  C:0230H         LINE#         81
+  C:0237H         LINE#         82
+  C:023DH         LINE#         83
+  C:0242H         LINE#         84
+  C:0248H         LINE#         85
+  C:024AH         LINE#         87
+  C:024AH         LINE#         89
+  C:0258H         LINE#         90
+  C:0261H         LINE#         91
+  C:0261H         LINE#         92
+  C:026FH         LINE#         93
+  C:026FH         LINE#         94
+  C:0274H         LINE#         95
+  C:027AH         LINE#         96
+  C:0280H         LINE#         97
+  C:0280H         LINE#         98
+  C:028EH         LINE#         99
+  C:028EH         LINE#         100
   -------         ENDPROC       READIR
   -------         ENDMOD        IR
 
@@ -471,30 +473,30 @@ SYMBOL TABLE OF MODULE:  learn (LCD)
   D:00B8H         PUBLIC        IP
   B:00B0H.3       PUBLIC        UP
   B:00B0H.6       PUBLIC        LEFT
-  C:0497H         PUBLIC        BTInit
+  C:04B1H         PUBLIC        BTInit
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   B:00B0H.7       PUBLIC        DOWN
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:07:45  PAGE 9
+
+
   -------         PROC          BTINIT
-  C:0497H         LINE#         9
-BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2018  22:00:33  PAGE 9
-
-
-  C:0497H         LINE#         10
-  C:0497H         LINE#         11
-  C:0499H         LINE#         12
-  C:049BH         LINE#         13
-  C:049DH         LINE#         14
-  C:049FH         LINE#         15
-  C:04A1H         LINE#         16
+  C:04B1H         LINE#         9
+  C:04B1H         LINE#         10
+  C:04B1H         LINE#         11
+  C:04B3H         LINE#         12
+  C:04B5H         LINE#         13
+  C:04B7H         LINE#         14
+  C:04B9H         LINE#         15
+  C:04BBH         LINE#         16
   -------         ENDPROC       BTINIT
   -------         ENDMOD        BUTTONS
 
   -------         MODULE        ?C?CLDOPTR
-  C:03FCH         PUBLIC        ?C?CLDOPTR
+  C:0416H         PUBLIC        ?C?CLDOPTR
   -------         ENDMOD        ?C?CLDOPTR
 
-Program Size: data=9.0 xdata=138 code=1220
+Program Size: data=9.0 xdata=138 code=1246
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

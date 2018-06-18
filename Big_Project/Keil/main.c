@@ -144,8 +144,12 @@ void main(void)
 			delay(1000-pwm);
 		}
 		else{
+			//PWM = 1;
+			//delay(1000);
+			PWM = 0;
+			delay(pwm);
 			PWM = 1;
-			delay(1000);
+			delay(1000-pwm);
 		}
 	}
 }
