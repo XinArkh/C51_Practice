@@ -3,5 +3,6 @@
 
 #include "lcd.h"
 #include "ir.h"
+#include "buttons.h"
 
 #endif

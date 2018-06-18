@@ -1,17 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000000000001000000fffffffffffffffffffffffffffffffffdffffff00000000090500002c030000</PLACEMENT>
+  <PLACEMENT>2c0000000000000001000000ffffffffffffffffffffffffffffffff4a00000020000000560500004c030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
-  <WINDOW type="default" module="VSMSTUDIO">
-   <FILE NAME="C:/Users/DELL-/Desktop/C51_Practice/Big_Project/Proteus/learn/AT89C52/main.c"/>
-   <STATE NAME="EDIT" VALUE="AAAA/wAAAAH9AAAAAgAAAAAAAAEAAAAB1fwCAAAAAfsAAAAQAFAAcgBvAGoAZQBjAHQAcwEAAAAAAAAB1QAAASwA////AAAAAwAABPQAAADW/AEAAAAB+wAAACAATwB1AHQAcAB1AHQARABvAGMAawBXAGkAZABnAGUAdAEAAAAAAAAE9AAAAEcA////AAAD8AAAAdUAAAAEAAAABAAAAAgAAAAI/AAAAAA="/>
-   <STATE NAME="DEBUG" VALUE="AAAA/wAAAAH9AAAAAwAAAAAAAAEAAAAB2/wCAAAAAfsAAAAQAFAAcgBvAGoAZQBjAHQAcwAAAAAAAAAB2wAAASwA////AAAAAQAAAIAAAAHb/AIAAAAB+wAAACQAZABvAGMAawA6ADQAMAA5ADcAOgBEAEMAIABNAG8AdABvAHIBAAAAAAAAAdsAAAAAAAAAAAAAAAMAAAUCAAAA1vwBAAAAAfwAAAAAAAAFAgAAAEcA////+gAAAAABAAAAB/sAAAAgAE8AdQB0AHAAdQB0AEQAbwBjAGsAVwBpAGQAZwBlAHQBAAAAAP////8AAABHAP////sAAAAqAGQAbwBjAGsAOgAwADoAUwBpAG0AdQBsAGEAdABpAG8AbgAgAEwAbwBnAAAAAAD/////AAAAAAAAAAD7AAAAJgBkAG8AYwBrADoAMQA6AFcAYQB0AGMAaAAgAFcAaQBuAGQAbwB3AAAAAAD/////AAAAAAAAAAD7AAAAPABkAG8AYwBrADoAMQA6ADgAMAA1ADEAIABDAFAAVQAgAFIAZQBnAGkAcwB0AGUAcgBzACAALQAgAFUAMQAAAAAA/////wAAAAAAAAAA+wAAAFgAZABvAGMAawA6ADMAOgA4ADAANQAxACAAQwBQAFUAIABJAG4AdABlAHIAbgBhAGwAIAAoAEkARABBAFQAQQApACAATQBlAG0AbwByAHkAIAAtACAAVQAxAAAAAAD/////AAAAAAAAAAD7AAAAPgBkAG8AYwBrADoAMgA6ADgAMAA1ADEAIABDAFAAVQAgAFMARgBSACAATQBlAG0AbwByAHkAIAAtACAAVQAxAAAAAAD/////AAAAAAAAAAD7AAAAQgBkAG8AYwBrADoAMQAwADAAMQA6ADgAMAA1ADEAIABDAFAAVQAgAFYAYQByAGkAYQBiAGwAZQBzACAALQAgAFUAMQEAAAAA/////wAAAAAAAAAAAAAFAgAAAdsAAAAEAAAABAAAAAgAAAAI/AAAAAA="/>
-  </WINDOW>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="400" x="54" flags="00000002" y="120" h="100" pid="0" iid="-1">
+   <POPUP w="400" x="86" flags="00000002" y="143" h="100" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">281</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -20,7 +15,7 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="350" x="54" flags="00000032" y="120" h="100" pid="1" iid="-1">
+   <POPUP w="350" x="86" flags="00000032" y="143" h="100" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">87</ITEM>
      <ITEM name="AutoResize">No</ITEM>
@@ -40,10 +35,10 @@
    <POPUP w="128" x="1329" flags="00000013" y="140" h="453" pid="4097" iid="4097">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="24" x="54" flags="00000048" y="120" h="17" pid="1" iid="26">
+   <POPUP w="24" x="86" flags="00000048" y="143" h="17" pid="1" iid="26">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="1" x="54" flags="0000000a" y="120" h="1" pid="3" iid="26">
+   <POPUP w="1" x="86" flags="0000000a" y="143" h="1" pid="3" iid="26">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -53,7 +48,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="1" x="54" flags="0000000a" y="120" h="1" pid="2" iid="26">
+   <POPUP w="1" x="86" flags="0000000a" y="143" h="1" pid="2" iid="26">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -63,7 +58,7 @@
      <ITEM name="TopLineAddress">00000080</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="1276" x="56" flags="0000002b" y="141" h="450" pid="1000" iid="26">
+   <POPUP w="1262" x="88" flags="0000002b" y="164" h="422" pid="1000" iid="26">
     <PROPERTIES>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
@@ -74,7 +69,7 @@
      <ITEM name="nBreakpoints">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="300" x="-746" flags="0000000b" y="-480" h="100" pid="1001" iid="26">
+   <POPUP w="300" x="-714" flags="0000000b" y="-457" h="100" pid="1001" iid="26">
     <PROPERTIES>
      <ITEM name="Address Column Width">99</ITEM>
      <ITEM name="AutoResize">No</ITEM>

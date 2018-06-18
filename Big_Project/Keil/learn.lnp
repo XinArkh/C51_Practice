@@ -1,5 +1,6 @@
 "lcd.obj",
 "main.obj",
-"ir.obj" 
+"ir.obj",
+"buttons.obj" 
 TO "learn" 
 RAMSIZE(256) 

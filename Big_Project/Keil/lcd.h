@@ -33,6 +33,6 @@ void Lcd1602_Delay1ms(uint c);
 /*LCD1602写入8位命令子函数*/
 void LcdWriteCom(uchar com);
 /*LCD1602写入8位数据子函数*/	
-void LcdWriteData(uchar dat);					  
+void LcdWriteData(uchar dat);
 
 #endif
