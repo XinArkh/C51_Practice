@@ -19,9 +19,9 @@ u8 Command='-';
 u16 low = 60;
 u16 high = 70;
 u16 pwm = 55;
-u16 offset = 800;
+u16 offset = 200;
 
-void delay(u8 i);		
+void delay(u16 i);		
 void CtrlInit();
 
 void main()
@@ -32,28 +32,28 @@ void main()
 		beep = 1;
 		
 		if(!START){
-			beep = 0;
+			//beep = 0;
 			Command = '4';
 			while(!START);
 		}
 		if(!SWI){
 			if(!UP){
-				beep = 0;
+				//beep = 0;
 				Command = '9';
 				while(!UP);
 			}
 			else if(!DOWN){
-				beep = 0;
+				//beep = 0;
 				Command = '5';
 				while(!DOWN);
 			}
 			else if(!LEFT){
-				beep = 0;
+				//beep = 0;
 				Command = '0';
 				while(!LEFT);
 			}
 			else if(!RIGHT){
-				beep = 0;
+				//beep = 0;
 				Command = '3';
 				while(!RIGHT);
 			}
@@ -74,8 +74,9 @@ void main()
 					pwm = high;
 				}
 				else{
-					pwm = 1000-high-offset;
+					//pwm = 1000-high-offset;
 					//pwm = high;
+					pwm = high+offset;
 				}
 				break;
 			case '5':
@@ -83,8 +84,9 @@ void main()
 					pwm = low;
 				}
 				else{
-					pwm = 1000-low-offset;
+					//pwm = 1000-low-offset;
 					//pwm = low;
+					pwm = low+offset;
 				}
 				break;
 			case '0':
@@ -93,8 +95,9 @@ void main()
 				break;
 			case '3':
 				Dir = 1;
-				pwm = 1000-low-offset;
+				//pwm = 1000-low-offset;
 				//pwm = low;
+				pwm = low+offset;
 				break;
 			default:
 				break;
@@ -102,7 +105,7 @@ void main()
 
 		Command = '-';
 		
-		if(!SWI){
+/*		if(!SWI){
 			PWM = 0;
 			delay(pwm);
 			PWM = 1;
@@ -115,11 +118,25 @@ void main()
 			delay(pwm);
 			PWM = 1;
 			delay(1000-pwm);
+		}*/
+		if(!Dir){  // PWM=0 invalid(at this time DIR=1)
+			PWM = 1;
+			delay(500-pwm);
+			PWM = 0;
+			delay(pwm);
+		}
+		else{  // PWM=1 invalid(at this time DIR=0)
+			PWM = 0;
+			delay(500-pwm);
+			PWM = 1;
+			delay(pwm);
 		}
 	}
  }
 
- void delay(u8 i){
+ 
+ 
+ void delay(u16 i){
 	 while(i--);
  }
  
