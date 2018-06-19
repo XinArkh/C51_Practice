@@ -19,13 +19,13 @@ u8 Command='-';
 u16 low = 60;
 u16 high = 70;
 u16 pwm = 55;
+u16 offset = 800;
 
 void delay(u8 i);		
 void CtrlInit();
 
 void main()
  { 
-	u8 i;
 	CtrlInit();
 
 	while(1){
@@ -74,8 +74,8 @@ void main()
 					pwm = high;
 				}
 				else{
-					//pwm = 1000-high-offset;
-					pwm = high;
+					pwm = 1000-high-offset;
+					//pwm = high;
 				}
 				break;
 			case '5':
@@ -83,8 +83,8 @@ void main()
 					pwm = low;
 				}
 				else{
-					//pwm = 1000-low-offset;
-					pwm = low;
+					pwm = 1000-low-offset;
+					//pwm = low;
 				}
 				break;
 			case '0':
@@ -93,8 +93,8 @@ void main()
 				break;
 			case '3':
 				Dir = 1;
-				//pwm = 1000-low-offset;
-				pwm = low;
+				pwm = 1000-low-offset;
+				//pwm = low;
 				break;
 			default:
 				break;
