@@ -1,4 +1,4 @@
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 1   
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 22:44:17 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
@@ -33,185 +33,188 @@ line level    source
   24          u8 Disp6[]="  Dir2  Speed2  ";
   25          
   26          u8 Command='-';
-  27          
-  28          u16 low = 200;
-  29          u16 high = 250;
-  30          
-  31          u16 pwm = 200;
-  32          
-  33          // 定义函数
-  34          void Init();
-  35          void CtrlInit();
-  36          void LcdDisp(uchar *dat);
-  37          
-  38          /*******************************************************************************
-  39          * 函 数 名         : main
-  40          * 函数功能       : 主函数
-  41          * 输    入         : 无
-  42          * 输    出         : 无
-  43          *******************************************************************************/
-  44          void main(void)
-  45          {
-  46   1        u8 i;
-  47   1        
-  48   1        Init();  // 初始化所有模块
-  49   1        
-  50   1        for(i=0;i<16;i++)  // LED第一行信息，只需要执行一次
-  51   1        {
-  52   2          LcdWriteData(Disp1[i]); 
-  53   2        }
-  54   1        LcdDisp(Disp2);
-  55   1      
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 2   
+  27          u8 runFlag = 0;
+  28          
+  29          u16 low = 200;
+  30          u16 high = 250;
+  31          
+  32          u16 pwm = 200;
+  33          
+  34          // 定义函数
+  35          void Init();
+  36          void CtrlInit();
+  37          void LcdDisp(uchar *dat);
+  38          
+  39          /*******************************************************************************
+  40          * 函 数 名         : main
+  41          * 函数功能       : 主函数
+  42          * 输    入         : 无
+  43          * 输    出         : 无
+  44          *******************************************************************************/
+  45          void main(void)
+  46          {
+  47   1        u8 i;
+  48   1        
+  49   1        Init();  // 初始化所有模块
+  50   1        
+  51   1        for(i=0;i<16;i++)  // LED第一行信息，只需要执行一次
+  52   1        {
+  53   2          LcdWriteData(Disp1[i]); 
+  54   2        }
+  55   1        LcdDisp(Disp2);
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 22:44:17 PAGE 2   
 
-  56   1        // 程序主循环
-  57   1        while(1){
-  58   2          beep = 1;
-  59   2          
-  60   2          if(!START){
-  61   3            beep = 0;
-  62   3            Command = '4';
-  63   3            while(!START);
-  64   3          }
-  65   2          if(!SWI){
-  66   3            if(!UP){
-  67   4              beep = 0;
-  68   4              Command = '9';
-  69   4              while(!UP);
-  70   4            }
-  71   3            else if(!DOWN){
-  72   4              beep = 0;
-  73   4              Command = '5';
-  74   4              while(!DOWN);
-  75   4            }
-  76   3            else if(!LEFT){
-  77   4              beep = 0;
-  78   4              Command = '0';
-  79   4              while(!LEFT);
-  80   4            }
-  81   3            else if(!RIGHT){
-  82   4              beep = 0;
-  83   4              Command = '3';
-  84   4              while(!RIGHT);
-  85   4            }
-  86   3          }
-  87   2          
+  56   1      
+  57   1        // 程序主循环
+  58   1        while(1){
+  59   2          beep = 1;
+  60   2          
+  61   2          if(!START){
+  62   3            beep = 0;
+  63   3            Command = '4';
+  64   3            while(!START);
+  65   3          }
+  66   2          if(!SWI){
+  67   3            if(!UP){
+  68   4              beep = 0;
+  69   4              Command = '9';
+  70   4              while(!UP);
+  71   4            }
+  72   3            else if(!DOWN){
+  73   4              beep = 0;
+  74   4              Command = '5';
+  75   4              while(!DOWN);
+  76   4            }
+  77   3            else if(!LEFT){
+  78   4              beep = 0;
+  79   4              Command = '0';
+  80   4              while(!LEFT);
+  81   4            }
+  82   3            else if(!RIGHT){
+  83   4              beep = 0;
+  84   4              Command = '3';
+  85   4              while(!RIGHT);
+  86   4            }
+  87   3          }
   88   2          
-  89   2          switch(Command){
-  90   3            case '4':
-  91   3              SWI = !SWI;
-  92   3              if(SWI){  // 停机
-  93   4                LcdDisp(Disp2);
-  94   4              }
-  95   3              else{  // 开启
-  96   4                Dir = 0;
-  97   4                pwm = low;
-  98   4                LcdDisp(Disp3);
-  99   4              }
- 100   3              break;
- 101   3            case '9':
- 102   3              if(!Dir){
- 103   4                pwm = high;
- 104   4                LcdDisp(Disp4);
- 105   4              }
- 106   3              else{
- 107   4                pwm = high;
- 108   4                LcdDisp(Disp6);
- 109   4              }
- 110   3              break;
- 111   3            case '5':
- 112   3              if(!Dir){
- 113   4                pwm = low;
- 114   4                LcdDisp(Disp3);
- 115   4              }
- 116   3              else{
- 117   4                pwm = low;
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 3   
+  89   2          
+  90   2          switch(Command){
+  91   3            case '4':
+  92   3              SWI = !SWI;
+  93   3              if(SWI){  // 停机
+  94   4                LcdDisp(Disp2);
+  95   4                runFlag = 0;
+  96   4              }
+  97   3              else{  // 开启
+  98   4                Dir = 0;
+  99   4                pwm = low;
+ 100   4                LcdDisp(Disp3);
+ 101   4                runFlag = 1;
+ 102   4              }
+ 103   3              break;
+ 104   3            case '9':
+ 105   3              if(!Dir){
+ 106   4                pwm = high;
+ 107   4                LcdDisp(Disp4);
+ 108   4              }
+ 109   3              else{
+ 110   4                pwm = high;
+ 111   4                LcdDisp(Disp6);
+ 112   4              }
+ 113   3              break;
+ 114   3            case '5':
+ 115   3              if(!Dir){
+ 116   4                pwm = low;
+ 117   4                LcdDisp(Disp3);
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 22:44:17 PAGE 3   
 
- 118   4                LcdDisp(Disp5);
- 119   4              }
- 120   3              break;
- 121   3            case '0':
- 122   3              Dir = 0;
- 123   3              pwm = low;
- 124   3              LcdDisp(Disp3);
- 125   3              break;
- 126   3            case '3':
- 127   3              Dir = 1;
- 128   3              pwm = low;
- 129   3              LcdDisp(Disp5);
- 130   3              break;
- 131   3            default:
- 132   3              break;
- 133   3          }
- 134   2          Command = '-';
- 135   2          
- 136   2          if(!SWI){
- 137   3            // Dir和DIR电位相反
- 138   3            // DIR和PWM电位相同时为无效状态
- 139   3            if(!Dir){  // PWM=1 invalid(at this time DIR=1)
- 140   4              PWM = 0;
- 141   4              delay(pwm);
- 142   4              PWM = 1;
- 143   4              delay(500-pwm);
- 144   4              //PWM = 0;
- 145   4              //delay(500);
- 146   4            }
- 147   3            else{  // PWM=0 invalid(at this time DIR=0)
- 148   4              PWM = 1;
- 149   4              delay(pwm);
- 150   4              PWM = 0;
- 151   4              delay(500-pwm);
- 152   4              //PWM = 1;
- 153   4              //delay(500);
- 154   4            }
- 155   3          }
- 156   2          else{
- 157   3            PWM = !Dir;  //PWM和Dir电位相反时PWM与DIR电位相同，无效状态
- 158   3            delay(500);
- 159   3          }
- 160   2        }
- 161   1      }
- 162          
- 163          
- 164          
+ 118   4              }
+ 119   3              else{
+ 120   4                pwm = low;
+ 121   4                LcdDisp(Disp5);
+ 122   4              }
+ 123   3              break;
+ 124   3            case '0':
+ 125   3              Dir = 0;
+ 126   3              pwm = low;
+ 127   3              LcdDisp(Disp3);
+ 128   3              break;
+ 129   3            case '3':
+ 130   3              Dir = 1;
+ 131   3              pwm = low;
+ 132   3              LcdDisp(Disp5);
+ 133   3              break;
+ 134   3            default:
+ 135   3              break;
+ 136   3          }
+ 137   2          Command = '-';
+ 138   2          
+ 139   2          if(!SWI){
+ 140   3            // Dir和DIR电位相反
+ 141   3            // DIR和PWM电位相同时为无效状态
+ 142   3            if(!Dir){  // PWM=1 invalid(at this time DIR=1)
+ 143   4              PWM = 0;
+ 144   4              delay(pwm);
+ 145   4              PWM = 1;
+ 146   4              delay(500-pwm);
+ 147   4              //PWM = 0;
+ 148   4              //delay(500);
+ 149   4            }
+ 150   3            else{  // PWM=0 invalid(at this time DIR=0)
+ 151   4              PWM = 1;
+ 152   4              delay(pwm);
+ 153   4              PWM = 0;
+ 154   4              delay(500-pwm);
+ 155   4              //PWM = 1;
+ 156   4              //delay(500);
+ 157   4            }
+ 158   3          }
+ 159   2          else{
+ 160   3            PWM = !Dir;  //PWM和Dir电位相反时PWM与DIR电位相同，无效状态
+ 161   3            delay(500);
+ 162   3          }
+ 163   2        }
+ 164   1      }
  165          
  166          
- 167          void Init(){
- 168   1        LcdInit();  // 初始化LCD
- 169   1        IrInit();  // 初始化红外接收器
- 170   1        BTInit();  // 初始化按钮引脚电平
- 171   1        CtrlInit();  // 初始化控制引脚
- 172   1      }
- 173          
- 174          void CtrlInit(){
- 175   1        // 开机时需要初始化继电器
- 176   1        SWI = 0;
- 177   1        delay(200);
- 178   1        SWI = 1;  // 电路板通电后电机默认关闭，即SWI=1
- 179   1        Dir = 1;
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 4   
+ 167          
+ 168          
+ 169          
+ 170          void Init(){
+ 171   1        LcdInit();  // 初始化LCD
+ 172   1        IrInit();  // 初始化红外接收器
+ 173   1        BTInit();  // 初始化按钮引脚电平
+ 174   1        CtrlInit();  // 初始化控制引脚
+ 175   1      }
+ 176          
+ 177          void CtrlInit(){
+ 178   1        // 开机时需要初始化继电器
+ 179   1        SWI = 0;
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 22:44:17 PAGE 4   
 
  180   1        delay(200);
- 181   1        Dir = 0;  // 方向1
- 182   1      }
- 183          
- 184          void LcdDisp(uchar *dat)
- 185          {
- 186   1        u8 i;
- 187   1        LcdWriteCom(0x80+0x40);
- 188   1        for(i=0;i<16;i++)
- 189   1        {
- 190   2          LcdWriteData(dat[i]); 
- 191   2        }
- 192   1        Lcd1602_Delay1ms(100);
- 193   1      }
+ 181   1        SWI = 1;  // 电路板通电后电机默认关闭，即SWI=1
+ 182   1        Dir = 1;
+ 183   1        delay(200);
+ 184   1        Dir = 0;  // 方向1
+ 185   1      }
+ 186          
+ 187          void LcdDisp(uchar *dat)
+ 188          {
+ 189   1        u8 i;
+ 190   1        LcdWriteCom(0x80+0x40);
+ 191   1        for(i=0;i<16;i++)
+ 192   1        {
+ 193   2          LcdWriteData(dat[i]); 
+ 194   2        }
+ 195   1        Lcd1602_Delay1ms(100);
+ 196   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    508    ----
+   CODE SIZE        =    528    ----
    CONSTANT SIZE    =   ----    ----
-   XDATA SIZE       =    126       5
+   XDATA SIZE       =    127       5
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----
    IDATA SIZE       =   ----    ----

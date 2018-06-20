@@ -6,6 +6,8 @@
 uchar IrValue[6];
 uchar Time;
 extern uchar Command;
+extern uchar runFlag;
+
 uchar code smgduan[16]={
 		'0','1','2','3','4','5','6','7',
 		'8','9','A','B','C','D','E','F'};
@@ -96,5 +98,8 @@ void ReadIr() interrupt 0
 			}
 		}
 		Command = smgduan[IrValue[2]%16];
+		if(runFlag == 0 && Command != '4'){
+			Command = '-';
+		}
 	}			
 }

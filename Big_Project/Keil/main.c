@@ -24,6 +24,7 @@ u8 Disp5[]="  Dir2  Speed1  ";
 u8 Disp6[]="  Dir2  Speed2  ";
 
 u8 Command='-';
+u8 runFlag = 0;
 
 u16 low = 200;
 u16 high = 250;
@@ -91,11 +92,13 @@ void main(void)
 				SWI = !SWI;
 				if(SWI){  // Í£»ú
 					LcdDisp(Disp2);
+					runFlag = 0;
 				}
 				else{  // ¿ªÆô
 					Dir = 0;
 					pwm = low;
 					LcdDisp(Disp3);
+					runFlag = 1;
 				}
 				break;
 			case '9':
