@@ -1,4 +1,4 @@
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 15:51:53 PAGE 1   
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
@@ -34,10 +34,10 @@ line level    source
   25          
   26          u8 Command='-';
   27          
-  28          u16 low = 60;
-  29          u16 high = 70;
-  30          u16 pwm = 55;
-  31          //u16 offset = 850;
+  28          u16 low = 200;
+  29          u16 high = 250;
+  30          
+  31          u16 pwm = 200;
   32          
   33          // 定义函数
   34          void Init();
@@ -62,7 +62,7 @@ line level    source
   53   2        }
   54   1        LcdDisp(Disp2);
   55   1      
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 15:51:53 PAGE 2   
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 2   
 
   56   1        // 程序主循环
   57   1        while(1){
@@ -115,98 +115,101 @@ line level    source
  104   4                LcdDisp(Disp4);
  105   4              }
  106   3              else{
- 107   4                //pwm = high+offset;
- 108   4                pwm = high;
- 109   4                LcdDisp(Disp6);
- 110   4              }
- 111   3              break;
- 112   3            case '5':
- 113   3              if(!Dir){
- 114   4                pwm = low;
- 115   4                LcdDisp(Disp3);
- 116   4              }
- 117   3              else{
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 15:51:53 PAGE 3   
+ 107   4                pwm = high;
+ 108   4                LcdDisp(Disp6);
+ 109   4              }
+ 110   3              break;
+ 111   3            case '5':
+ 112   3              if(!Dir){
+ 113   4                pwm = low;
+ 114   4                LcdDisp(Disp3);
+ 115   4              }
+ 116   3              else{
+ 117   4                pwm = low;
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 3   
 
- 118   4                //pwm = low+offset;
- 119   4                pwm = low;
- 120   4                LcdDisp(Disp5);
- 121   4              }
- 122   3              break;
- 123   3            case '0':
- 124   3              Dir = 0;
- 125   3              pwm = low;
- 126   3              LcdDisp(Disp3);
- 127   3              break;
- 128   3            case '3':
- 129   3              Dir = 1;
- 130   3              //pwm = low+offset;
- 131   3              pwm = low;
- 132   3              LcdDisp(Disp5);
- 133   3              break;
- 134   3            default:
- 135   3              break;
- 136   3          }
- 137   2          Command = '-';
- 138   2          
- 139   2          if(!SWI){
- 140   3            // Dir和DIR电位相反
- 141   3            // DIR和PWM电位相同时为无效状态
- 142   3            if(!Dir){  // PWM=1 invalid(at this time DIR=1)
- 143   4              PWM = 0;
- 144   4              delay(pwm);
- 145   4              PWM = 1;
- 146   4              delay(500-pwm);
- 147   4            }
- 148   3            else{  // PWM=0 invalid(at this time DIR=0)
- 149   4              /*PWM = 1;
- 150   4              delay(pwm+400);
- 151   4              PWM = 0;
- 152   4              delay(500-pwm-400);*/
- 153   4              PWM = Dir;
- 154   4              delay(500);
- 155   4            }
- 156   3          }
- 157   2          else{
- 158   3            PWM = !Dir;  //PWM和Dir电位相反时PWM与DIR电位相同，无效状态
- 159   3            delay(500);
- 160   3          }
- 161   2        }
- 162   1      }
+ 118   4                LcdDisp(Disp5);
+ 119   4              }
+ 120   3              break;
+ 121   3            case '0':
+ 122   3              Dir = 0;
+ 123   3              pwm = low;
+ 124   3              LcdDisp(Disp3);
+ 125   3              break;
+ 126   3            case '3':
+ 127   3              Dir = 1;
+ 128   3              pwm = low;
+ 129   3              LcdDisp(Disp5);
+ 130   3              break;
+ 131   3            default:
+ 132   3              break;
+ 133   3          }
+ 134   2          Command = '-';
+ 135   2          
+ 136   2          if(!SWI){
+ 137   3            // Dir和DIR电位相反
+ 138   3            // DIR和PWM电位相同时为无效状态
+ 139   3            if(!Dir){  // PWM=1 invalid(at this time DIR=1)
+ 140   4              PWM = 0;
+ 141   4              delay(pwm);
+ 142   4              PWM = 1;
+ 143   4              delay(500-pwm);
+ 144   4              //PWM = 0;
+ 145   4              //delay(500);
+ 146   4            }
+ 147   3            else{  // PWM=0 invalid(at this time DIR=0)
+ 148   4              PWM = 1;
+ 149   4              delay(pwm);
+ 150   4              PWM = 0;
+ 151   4              delay(500-pwm);
+ 152   4              //PWM = 1;
+ 153   4              //delay(500);
+ 154   4            }
+ 155   3          }
+ 156   2          else{
+ 157   3            PWM = !Dir;  //PWM和Dir电位相反时PWM与DIR电位相同，无效状态
+ 158   3            delay(500);
+ 159   3          }
+ 160   2        }
+ 161   1      }
+ 162          
  163          
- 164          void Init(){
- 165   1        LcdInit();  // 初始化LCD
- 166   1        IrInit();  // 初始化红外接收器
- 167   1        BTInit();  // 初始化按钮引脚电平
- 168   1        CtrlInit();  // 初始化控制引脚
- 169   1      }
- 170          
- 171          void CtrlInit(){
- 172   1        // 开机时需要初始化继电器
- 173   1        SWI = 0;
- 174   1        delay(200);
- 175   1        SWI = 1;  // 电路板通电后电机默认关闭，即SWI=1
- 176   1        Dir = 1;
+ 164          
+ 165          
+ 166          
+ 167          void Init(){
+ 168   1        LcdInit();  // 初始化LCD
+ 169   1        IrInit();  // 初始化红外接收器
+ 170   1        BTInit();  // 初始化按钮引脚电平
+ 171   1        CtrlInit();  // 初始化控制引脚
+ 172   1      }
+ 173          
+ 174          void CtrlInit(){
+ 175   1        // 开机时需要初始化继电器
+ 176   1        SWI = 0;
  177   1        delay(200);
- 178   1        Dir = 0;  // 方向1
- 179   1      }
-C51 COMPILER V9.54   MAIN                                                                  06/20/2018 15:51:53 PAGE 4   
+ 178   1        SWI = 1;  // 电路板通电后电机默认关闭，即SWI=1
+ 179   1        Dir = 1;
+C51 COMPILER V9.54   MAIN                                                                  06/20/2018 21:05:06 PAGE 4   
 
- 180          
- 181          void LcdDisp(uchar *dat)
- 182          {
- 183   1        u8 i;
- 184   1        LcdWriteCom(0x80+0x40);
- 185   1        for(i=0;i<16;i++)
- 186   1        {
- 187   2          LcdWriteData(dat[i]); 
- 188   2        }
- 189   1        Lcd1602_Delay1ms(100);
- 190   1      }
+ 180   1        delay(200);
+ 181   1        Dir = 0;  // 方向1
+ 182   1      }
+ 183          
+ 184          void LcdDisp(uchar *dat)
+ 185          {
+ 186   1        u8 i;
+ 187   1        LcdWriteCom(0x80+0x40);
+ 188   1        for(i=0;i<16;i++)
+ 189   1        {
+ 190   2          LcdWriteData(dat[i]); 
+ 191   2        }
+ 192   1        Lcd1602_Delay1ms(100);
+ 193   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    501    ----
+   CODE SIZE        =    508    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =    126       5
    PDATA SIZE       =   ----    ----

@@ -1,4 +1,4 @@
-C51 COMPILER V9.54   LCD                                                                   06/20/2018 15:51:53 PAGE 1   
+C51 COMPILER V9.54   LCD                                                                   06/20/2018 21:05:05 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE LCD
@@ -62,7 +62,7 @@ line level    source
   53   1        LCD1602_E = 1;            //写入时序
   54   1        Lcd1602_Delay1ms(5);    //保持时间
   55   1        LCD1602_E = 0;
-C51 COMPILER V9.54   LCD                                                                   06/20/2018 15:51:53 PAGE 2   
+C51 COMPILER V9.54   LCD                                                                   06/20/2018 21:05:05 PAGE 2   
 
   56   1      }
   57          

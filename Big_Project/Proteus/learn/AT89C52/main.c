@@ -105,19 +105,29 @@ void main()
 
 		Command = '-';
 
-		// Dir和DIR电位相反
-		// DIR和PWM电位相同时为无效状态
-		if(!Dir){  // PWM=1 invalid(at this time DIR=1)
-			PWM = 0;
-			delay(pwm);
-			PWM = 1;
-			delay(500-pwm);
+		if(!SWI){
+			// Dir和DIR电位相反
+			// DIR和PWM电位相同时为无效状态
+			if(!Dir){  // PWM=1 invalid(at this time DIR=1)
+				/*PWM = 0;
+				delay(pwm);
+				PWM = 1;
+				delay(500-pwm);*/
+				PWM = Dir;
+				delay(500);
+			}
+			else{  // PWM=0 invalid(at this time DIR=0)
+				/*PWM = 1;
+				delay(pwm);
+				PWM = 0;
+				delay(500-pwm);*/
+				PWM = Dir;
+				delay(500);
+			}
 		}
-		else{  // PWM=0 invalid(at this time DIR=0)
-			PWM = 1;
-			delay(pwm);
-			PWM = 0;
-			delay(500-pwm);
+		else{
+			PWM = !Dir;  // 保持在无效状态
+			delay(500);
 		}
 	}
  }

@@ -25,10 +25,10 @@ u8 Disp6[]="  Dir2  Speed2  ";
 
 u8 Command='-';
 
-u16 low = 60;
-u16 high = 70;
-u16 pwm = 55;
-//u16 offset = 850;
+u16 low = 200;
+u16 high = 250;
+
+u16 pwm = 200;
 
 // 定义函数
 void Init();
@@ -104,7 +104,6 @@ void main(void)
 					LcdDisp(Disp4);
 				}
 				else{
-					//pwm = high+offset;
 					pwm = high;
 					LcdDisp(Disp6);
 				}
@@ -115,7 +114,6 @@ void main(void)
 					LcdDisp(Disp3);
 				}
 				else{
-					//pwm = low+offset;
 					pwm = low;
 					LcdDisp(Disp5);
 				}
@@ -127,7 +125,6 @@ void main(void)
 				break;
 			case '3':
 				Dir = 1;
-				//pwm = low+offset;
 				pwm = low;
 				LcdDisp(Disp5);
 				break;
@@ -144,14 +141,16 @@ void main(void)
 				delay(pwm);
 				PWM = 1;
 				delay(500-pwm);
+				//PWM = 0;
+				//delay(500);
 			}
 			else{  // PWM=0 invalid(at this time DIR=0)
-				/*PWM = 1;
-				delay(pwm+400);
+				PWM = 1;
+				delay(pwm);
 				PWM = 0;
-				delay(500-pwm-400);*/
-				PWM = Dir;
-				delay(500);
+				delay(500-pwm);
+				//PWM = 1;
+				//delay(500);
 			}
 		}
 		else{
@@ -160,6 +159,10 @@ void main(void)
 		}
 	}
 }
+
+
+
+
 
 void Init(){
 	LcdInit();  // 初始化LCD
