@@ -1,0 +1,123 @@
+Removed Pin From Net: NetName=VCC Pin=BEEP1-1
+Removed Pin From Net: NetName=VCC Pin=IR1-1
+Removed Pin From Net: NetName=P32 Pin=IR1-3
+Removed Pin From Net: NetName=GND Pin=JDQ1-1
+Removed Pin From Net: NetName=VCC Pin=JDQ1-2
+Removed Pin From Net: NetName=VCC Pin=JDQ1-3
+Removed Pin From Net: NetName=EGY Pin=JDQ1-4
+Removed Pin From Net: NetName=GND Pin=JDQ2-1
+Removed Pin From Net: NetName=VCC Pin=JDQ2-2
+Removed Pin From Net: NetName=VCC Pin=JDQ2-3
+Removed Pin From Net: NetName=DIR Pin=JDQ2-4
+Removed Pin From Net: NetName=EGY Pin=Q1-3
+Removed Pin From Net: NetName=EGY Pin=Q2-3
+Removed Pin From Net: NetName=EGY Pin=Q3-3
+Removed Pin From Net: NetName=EGY Pin=Q4-3
+Removed Pin From Net: NetName=GND Pin=Q5-1
+Removed Pin From Net: NetName=NetQ1_2 Pin=Q5-3
+Removed Pin From Net: NetName=GND Pin=Q6-1
+Removed Pin From Net: NetName=NetQ2_2 Pin=Q6-3
+Removed Pin From Net: NetName=NetBEEP1_2 Pin=Q9-1
+Removed Pin From Net: NetName=GND Pin=Q9-3
+Removed Pin From Net: NetName=P21 Pin=R5-1
+Removed Pin From Net: NetName=GND Pin=RP1-1
+Removed Pin From Net: NetName=GND Pin=SCR1-1
+Removed Pin From Net: NetName=VCC Pin=SCR1-2
+Removed Pin From Net: NetName=NetRP1_2 Pin=SCR1-3
+Removed Pin From Net: NetName=P26 Pin=SCR1-4
+Removed Pin From Net: NetName=P25 Pin=SCR1-5
+Removed Pin From Net: NetName=P27 Pin=SCR1-6
+Removed Pin From Net: NetName=P00 Pin=SCR1-7
+Removed Pin From Net: NetName=P01 Pin=SCR1-8
+Removed Pin From Net: NetName=P02 Pin=SCR1-9
+Removed Pin From Net: NetName=P03 Pin=SCR1-10
+Removed Pin From Net: NetName=P04 Pin=SCR1-11
+Removed Pin From Net: NetName=P05 Pin=SCR1-12
+Removed Pin From Net: NetName=P06 Pin=SCR1-13
+Removed Pin From Net: NetName=P07 Pin=SCR1-14
+Removed Pin From Net: NetName=VCC Pin=SCR1-15
+Removed Pin From Net: NetName=GND Pin=SCR1-16
+Removed Pin From Net: NetName=P23 Pin=U1-3
+Removed Pin From Net: NetName=P22 Pin=U1-6
+Removed Pin From Net: NetName=GND Pin=U1-8
+Removed Pin From Net: NetName=VCC Pin=U1-9
+Removed Member From Class: ClassName=原理图 Member=U2
+Change Component Comment : Designator=SCR1 Old Comment=LCD New Comment=LCD1602
+Change Component Designator: OldDesignator=Q1 NewDesignator=Q3
+Change Component Designator: OldDesignator=Q2 NewDesignator=Q4
+Change Component Designator: OldDesignator=Q3 NewDesignator=Q5
+Change Component Designator: OldDesignator=Q4 NewDesignator=Q6
+Change Component Designator: OldDesignator=Q5 NewDesignator=Q7
+Change Component Designator: OldDesignator=Q6 NewDesignator=Q8
+Change Component Designator: OldDesignator=Q7 NewDesignator=Q9
+Change Component Designator: OldDesignator=Q8 NewDesignator=Q10
+Change Component Designator: OldDesignator=R1 NewDesignator=R3
+Change Component Designator: OldDesignator=R2 NewDesignator=R4
+Change Component Designator: OldDesignator=R3 NewDesignator=R5
+Change Component Designator: OldDesignator=R4 NewDesignator=R6
+Change Component Designator: OldDesignator=R5 NewDesignator=R7
+Change Component Designator: OldDesignator=R6 NewDesignator=R8
+Change Component Designator: OldDesignator=R7 NewDesignator=R9
+Change Component Designator: OldDesignator=U2 NewDesignator=U1
+Added Component: Designator=Q1(PINS-3)
+Added Component: Designator=Q2(PINS-3)
+Added Component: Designator=Q11(PINS-3)
+Added Component: Designator=R1(RES)
+Added Component: Designator=R2(RES)
+Added Component: Designator=R10(RES)
+Added Pin To Net: NetName=P32 Pin=IR1-1
+Added Pin To Net: NetName=VCC Pin=IR1-3
+Added Pin To Net: NetName=VCC Pin=Q1-1
+Added Pin To Net: NetName=VCC Pin=Q2-1
+Added Pin To Net: NetName=EGY Pin=Q3-1
+Added Pin To Net: NetName=EGY Pin=Q4-1
+Added Pin To Net: NetName=EGY Pin=Q5-1
+Added Pin To Net: NetName=EGY Pin=Q6-1
+Added Pin To Net: NetName=NetQ1_2 Pin=Q7-1
+Added Pin To Net: NetName=GND Pin=Q7-3
+Added Pin To Net: NetName=NetQ2_2 Pin=Q8-1
+Added Pin To Net: NetName=GND Pin=Q8-3
+Added Pin To Net: NetName=VCC Pin=Q11-1
+Added Pin To Net: NetName=P23 Pin=R1-1
+Added Pin To Net: NetName=P22 Pin=R2-1
+Added Pin To Net: NetName=P37 Pin=R7-1
+Added Pin To Net: NetName=NetBEEP1_2 Pin=R10-1
+Added Pin To Net: NetName=GND Pin=R10-2
+Change Net Name : Old Net Name=NetQ1_2 New Net Name=NetQ3_2
+Change Net Name : Old Net Name=NetQ2_2 New Net Name=NetQ4_2
+Change Net Name : Old Net Name=NetQ5_2 New Net Name=NetQ7_2
+Change Net Name : Old Net Name=NetQ6_2 New Net Name=NetQ8_2
+Added Pin To Net: NetName=NetBEEP1_1 Pin=BEEP1-1
+Added Pin To Net: NetName=NetBEEP1_1 Pin=Q11-3
+Added Net: Name=NetBEEP1_1
+Added Pin To Net: NetName=NetJDQ1_3 Pin=Q1-3
+Added Net: Name=NetJDQ1_3
+Added Pin To Net: NetName=NetJDQ2_3 Pin=Q2-3
+Added Net: Name=NetJDQ2_3
+Added Pin To Net: NetName=NetM1_IN Pin=Q5-3
+Added Pin To Net: NetName=NetM1_IN Pin=Q10-1
+Added Net: Name=NetM1_IN
+Added Pin To Net: NetName=NetM1_OUT Pin=Q6-3
+Added Pin To Net: NetName=NetM1_OUT Pin=Q9-1
+Added Net: Name=NetM1_OUT
+Added Pin To Net: NetName=NetQ1_2 Pin=Q1-2
+Added Pin To Net: NetName=NetQ1_2 Pin=R1-2
+Added Net: Name=NetQ1_2
+Added Pin To Net: NetName=NetQ2_2 Pin=Q2-2
+Added Pin To Net: NetName=NetQ2_2 Pin=R2-2
+Added Net: Name=NetQ2_2
+Added Pin To Net: NetName=NetQ3_3 Pin=Q3-3
+Added Pin To Net: NetName=NetQ3_3 Pin=Q6-2
+Added Net: Name=NetQ3_3
+Added Pin To Net: NetName=NetQ4_3 Pin=Q4-3
+Added Pin To Net: NetName=NetQ4_3 Pin=Q5-2
+Added Net: Name=NetQ4_3
+Added Pin To Net: NetName=NetQ11_2 Pin=Q11-2
+Added Pin To Net: NetName=NetQ11_2 Pin=R8-2
+Added Net: Name=NetQ11_2
+Added Member To Class: ClassName=原理图 Member=Component Q10 9012
+Added Member To Class: ClassName=原理图 Member=Component Q11 9013
+Added Member To Class: ClassName=原理图 Member=Component R8 100
+Added Member To Class: ClassName=原理图 Member=Component R9 10K
+Added Member To Class: ClassName=原理图 Member=Component R10 100
+Added Room: Name=原理图

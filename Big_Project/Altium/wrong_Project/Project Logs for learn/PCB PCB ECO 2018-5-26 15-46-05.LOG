@@ -1,0 +1,4 @@
+Added Component: Designator=M1(MOTOR)
+Added Component: Designator=SCR1(LCD)
+Added Member To Class: ClassName=原理图 Member=Component M1 MOTOR
+Added Member To Class: ClassName=原理图 Member=Component SCR1 LCD1602

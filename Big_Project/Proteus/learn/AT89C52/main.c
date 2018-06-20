@@ -19,7 +19,7 @@ u8 Command='-';
 u16 low = 60;
 u16 high = 70;
 u16 pwm = 55;
-u16 offset = 200;
+u16 offset = 0;
 
 void delay(u16 i);		
 void CtrlInit();
@@ -32,28 +32,28 @@ void main()
 		beep = 1;
 		
 		if(!START){
-			//beep = 0;
+			beep = 0;
 			Command = '4';
 			while(!START);
 		}
 		if(!SWI){
 			if(!UP){
-				//beep = 0;
+				beep = 0;
 				Command = '9';
 				while(!UP);
 			}
 			else if(!DOWN){
-				//beep = 0;
+				beep = 0;
 				Command = '5';
 				while(!DOWN);
 			}
 			else if(!LEFT){
-				//beep = 0;
+				beep = 0;
 				Command = '0';
 				while(!LEFT);
 			}
 			else if(!RIGHT){
-				//beep = 0;
+				beep = 0;
 				Command = '3';
 				while(!RIGHT);
 			}
@@ -76,7 +76,7 @@ void main()
 				else{
 					//pwm = 1000-high-offset;
 					//pwm = high;
-					pwm = high+offset;
+					pwm = high;
 				}
 				break;
 			case '5':
@@ -86,7 +86,7 @@ void main()
 				else{
 					//pwm = 1000-low-offset;
 					//pwm = low;
-					pwm = low+offset;
+					pwm = low;
 				}
 				break;
 			case '0':
@@ -97,39 +97,27 @@ void main()
 				Dir = 1;
 				//pwm = 1000-low-offset;
 				//pwm = low;
-				pwm = low+offset;
+				pwm = low;
 				break;
 			default:
 				break;
 		}
 
 		Command = '-';
-		
-/*		if(!SWI){
+
+		// Dir和DIR电位相反
+		// DIR和PWM电位相同时为无效状态
+		if(!Dir){  // PWM=1 invalid(at this time DIR=1)
 			PWM = 0;
 			delay(pwm);
-			PWM = 1;
-			delay(1000-pwm);
-		}
-		else{
-			//PWM = 1;
-			//delay(1000);
-			PWM = 0;
-			delay(pwm);
-			PWM = 1;
-			delay(1000-pwm);
-		}*/
-		if(!Dir){  // PWM=0 invalid(at this time DIR=1)
 			PWM = 1;
 			delay(500-pwm);
-			PWM = 0;
-			delay(pwm);
 		}
-		else{  // PWM=1 invalid(at this time DIR=0)
-			PWM = 0;
-			delay(500-pwm);
+		else{  // PWM=0 invalid(at this time DIR=0)
 			PWM = 1;
 			delay(pwm);
+			PWM = 0;
+			delay(500-pwm);
 		}
 	}
  }

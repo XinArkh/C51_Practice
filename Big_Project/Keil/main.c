@@ -104,7 +104,7 @@ void main(void)
 					LcdDisp(Disp4);
 				}
 				else{
-					//pwm = 1000-high-offset;
+					//pwm = high+offset;
 					pwm = high;
 					LcdDisp(Disp6);
 				}
@@ -115,7 +115,7 @@ void main(void)
 					LcdDisp(Disp3);
 				}
 				else{
-					//pwm = 1000-low-offset;
+					//pwm = low+offset;
 					pwm = low;
 					LcdDisp(Disp5);
 				}
@@ -127,29 +127,36 @@ void main(void)
 				break;
 			case '3':
 				Dir = 1;
-				//pwm = 1000-low-offset;
+				//pwm = low+offset;
 				pwm = low;
 				LcdDisp(Disp5);
 				break;
 			default:
 				break;
 		}
-
 		Command = '-';
 		
 		if(!SWI){
-			PWM = 0;
-			delay(pwm);
-			PWM = 1;
-			delay(1000-pwm);
+			// Dir和DIR电位相反
+			// DIR和PWM电位相同时为无效状态
+			if(!Dir){  // PWM=1 invalid(at this time DIR=1)
+				PWM = 0;
+				delay(pwm);
+				PWM = 1;
+				delay(500-pwm);
+			}
+			else{  // PWM=0 invalid(at this time DIR=0)
+				/*PWM = 1;
+				delay(pwm+400);
+				PWM = 0;
+				delay(500-pwm-400);*/
+				PWM = Dir;
+				delay(500);
+			}
 		}
 		else{
-			//PWM = 1;
-			//delay(1000);
-			PWM = 0;
-			delay(pwm);
-			PWM = 1;
-			delay(1000-pwm);
+			PWM = !Dir;  //PWM和Dir电位相反时PWM与DIR电位相同，无效状态
+			delay(500);
 		}
 	}
 }
@@ -162,7 +169,12 @@ void Init(){
 }
 
 void CtrlInit(){
-	SWI = 1;  // 电路板通电后电机默认关闭
+	// 开机时需要初始化继电器
+	SWI = 0;
+	delay(200);
+	SWI = 1;  // 电路板通电后电机默认关闭，即SWI=1
+	Dir = 1;
+	delay(200);
 	Dir = 0;  // 方向1
 }
 
