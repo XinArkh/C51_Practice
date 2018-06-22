@@ -1,0 +1,283 @@
+C51 COMPILER V9.54   MAIN                                                                  06/22/2018 16:19:53 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\Keil\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          typedef unsigned char u8;
+   3          typedef unsigned int u16;
+   4          sbit beep=P1^5;
+   5          #define GPIO_KEY P1
+   6          u8 KeyValue;  //用来存放读取到的键值
+   7          u8 value;
+   8          u8 smg[16]={0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71
+             -}; //0~A
+   9          void delay(u16 i)
+  10          {
+  11   1        while(i--);
+  12   1      }
+  13          void KEY_Scan(void)
+  14          {
+  15   1        char a=0;
+  16   1        GPIO_KEY=0x0f;
+  17   1        if(GPIO_KEY!=0x0f)//读取按键是否按下
+  18   1        {
+  19   2          delay(1000);//延时10ms进行消抖
+  20   2          if(GPIO_KEY!=0x0f)//再次检测键盘是否按下
+  21   2          { 
+  22   3            //测试列
+  23   3            GPIO_KEY=0X0F;
+  24   3            switch(GPIO_KEY)
+  25   3            {
+  26   4              case(0X07): KeyValue=1;break;
+  27   4              case(0X0b): KeyValue=2;break;
+  28   4              case(0X0d): KeyValue=3;break;
+  29   4              case(0X0e): KeyValue=4;break;
+  30   4            }
+  31   3            //测试行
+  32   3            GPIO_KEY=0XF0;
+  33   3            switch(GPIO_KEY)
+  34   3            {
+  35   4              case(0X70): KeyValue=KeyValue;break;
+  36   4              case(0Xb0): KeyValue=KeyValue+4;break;
+  37   4              case(0Xd0): KeyValue=KeyValue+8;break;
+  38   4              case(0Xe0): KeyValue=KeyValue+12;break;
+  39   4            }
+  40   3            while((a<50)&&(GPIO_KEY!=0xf0))  //检测按键松手检测
+  41   3            {
+  42   4              delay(1000);
+  43   4              a++;
+  44   4            }
+  45   3          }
+  46   2        }
+  47   1      }
+  48          
+  49          void sound()
+  50          {
+  51   1        u16 i=200;
+  52   1        if(KeyValue==1)
+  53   1        {
+C51 COMPILER V9.54   MAIN                                                                  06/22/2018 16:19:53 PAGE 2   
+
+  54   2          KeyValue=0;
+  55   2          P0=smg[0];
+  56   2          while(i--)
+  57   2          {
+  58   3            beep=~beep;    //低音1
+  59   3            delay(380);
+  60   3          }
+  61   2          
+  62   2        }
+  63   1      
+  64   1        if(KeyValue==2)
+  65   1        {
+  66   2          KeyValue=0;
+  67   2          P0=smg[1];
+  68   2          while(i--)
+  69   2          {
+  70   3            beep=~beep;    //低音2
+  71   3            delay(341);
+  72   3          }
+  73   2          
+  74   2        }
+  75   1      
+  76   1        if(KeyValue==3)
+  77   1        {
+  78   2          KeyValue=0;
+  79   2          P0=smg[2];
+  80   2          while(i--)
+  81   2          {
+  82   3            beep=~beep;   //低音3
+  83   3            delay(303);
+  84   3          }
+  85   2        }
+  86   1      
+  87   1        if(KeyValue==4)
+  88   1        {
+  89   2          KeyValue=0;
+  90   2          P0=smg[3];
+  91   2          while(i--)
+  92   2          {
+  93   3            beep=~beep;   //低音4
+  94   3            delay(286);
+  95   3          }
+  96   2        }
+  97   1      
+  98   1        if(KeyValue==5)
+  99   1        {
+ 100   2          KeyValue=0;
+ 101   2          P0=smg[4];
+ 102   2          while(i--)
+ 103   2          {
+ 104   3            beep=~beep;   //低音5
+ 105   3            delay(255);
+ 106   3          }
+ 107   2        }
+ 108   1      
+ 109   1        if(KeyValue==6)
+ 110   1        {
+ 111   2          KeyValue=0;
+ 112   2          P0=smg[5];
+ 113   2          while(i--)
+ 114   2          {
+ 115   3            beep=~beep;   //低音6
+C51 COMPILER V9.54   MAIN                                                                  06/22/2018 16:19:53 PAGE 3   
+
+ 116   3            delay(227);
+ 117   3          }
+ 118   2        }
+ 119   1      
+ 120   1        if(KeyValue==7)
+ 121   1        {
+ 122   2          KeyValue=0;
+ 123   2          P0=smg[6];
+ 124   2          while(i--)
+ 125   2          {
+ 126   3            beep=~beep;    //低音7
+ 127   3            delay(203);
+ 128   3          }
+ 129   2        }
+ 130   1      
+ 131   1        if(KeyValue==8)
+ 132   1        {
+ 133   2          KeyValue=0;
+ 134   2          P0=smg[7];
+ 135   2          while(i--)
+ 136   2          {
+ 137   3            beep=~beep;   //中音1
+ 138   3            delay(191);
+ 139   3          }
+ 140   2        }
+ 141   1      
+ 142   1        if(KeyValue==9)
+ 143   1        {
+ 144   2          KeyValue=0;
+ 145   2          P0=smg[8];
+ 146   2          while(i--)
+ 147   2          {
+ 148   3            beep=~beep;    //中音2
+ 149   3            delay(170);
+ 150   3          }
+ 151   2        }
+ 152   1      
+ 153   1        if(KeyValue==10)
+ 154   1        {
+ 155   2          KeyValue=0;
+ 156   2          P0=smg[9];
+ 157   2          while(i--)
+ 158   2          {
+ 159   3            beep=~beep;    //中音3
+ 160   3            delay(152);
+ 161   3          }
+ 162   2        }
+ 163   1      
+ 164   1        if(KeyValue==11)
+ 165   1        {
+ 166   2          KeyValue=0;
+ 167   2          P0=smg[10];
+ 168   2          while(i--)
+ 169   2          {
+ 170   3            beep=~beep;    //中音4
+ 171   3            delay(143);
+ 172   3          }
+ 173   2        }
+ 174   1      
+ 175   1        if(KeyValue==12)
+ 176   1        {
+ 177   2          KeyValue=0;
+C51 COMPILER V9.54   MAIN                                                                  06/22/2018 16:19:53 PAGE 4   
+
+ 178   2          P0=smg[11];
+ 179   2          while(i--)
+ 180   2          {
+ 181   3            beep=~beep;    //中音5
+ 182   3            delay(128);
+ 183   3          }
+ 184   2        }
+ 185   1      
+ 186   1        if(KeyValue==13)
+ 187   1        {
+ 188   2          KeyValue=0;
+ 189   2          P0=smg[12];
+ 190   2          while(i--)
+ 191   2          {
+ 192   3            beep=~beep;   //中音6
+ 193   3            delay(114);
+ 194   3          }
+ 195   2        }
+ 196   1      
+ 197   1        if(KeyValue==14)
+ 198   1        {
+ 199   2          KeyValue=0;
+ 200   2          P0=smg[13];
+ 201   2          while(i--)
+ 202   2          {
+ 203   3            beep=~beep;   //中音7
+ 204   3            delay(101);
+ 205   3          }
+ 206   2        }
+ 207   1      
+ 208   1        if(KeyValue==15)
+ 209   1        {
+ 210   2          KeyValue=0;
+ 211   2          P0=smg[14];
+ 212   2          while(i--)
+ 213   2          {
+ 214   3            beep=~beep;   //高音1
+ 215   3            delay(96);
+ 216   3          }
+ 217   2        }
+ 218   1      
+ 219   1        if(KeyValue==16)
+ 220   1        {
+ 221   2          KeyValue=0;
+ 222   2          P0=smg[15];
+ 223   2          while(i--)
+ 224   2          {
+ 225   3            beep=~beep;   //高音2
+ 226   3            delay(85);
+ 227   3          }
+ 228   2        }
+ 229   1      }
+ 230          void time0init()
+ 231          {
+ 232   1        TMOD=0X01;
+ 233   1        TH0=0XFc;
+ 234   1        TL0=0X18;
+ 235   1        TR0=1;
+ 236   1        ET0=1;
+ 237   1        EA=1;
+ 238   1      }
+ 239          void main()
+C51 COMPILER V9.54   MAIN                                                                  06/22/2018 16:19:53 PAGE 5   
+
+ 240          {
+ 241   1        time0init();
+ 242   1        while(1);   
+ 243   1      }
+ 244          void tim0() interrupt 1
+ 245          {
+ 246   1        TH0=0XFc;
+ 247   1        TL0=0X18;
+ 248   1        KEY_Scan();
+ 249   1        sound();    
+ 250   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    725    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     18       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

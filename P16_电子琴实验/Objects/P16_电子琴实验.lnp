@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\P16_电子琴实验" 
+PRINT(".\Listings\P16_电子琴实验.m51") RAMSIZE(256) 

@@ -1,0 +1,3 @@
+".\Objects\LEDs.obj" 
+TO ".\Objects\P14_8X8点阵动态显示数字" 
+PRINT(".\Listings\P14_8X8点阵动态显示数字.m51") RAMSIZE(256) 
