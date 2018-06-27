@@ -1,0 +1,21 @@
+﻿Field=#~Integer~#~50|Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~learn.PrjPcb|ReportField=ProjectFullPath~C:\Users\DELL-\Desktop\C51_Practice\Big_Project\Altium\Project\learn.PrjPcb|ReportField=Title~Bill of Materials For Project [learn.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~40|ReportField=ReportTime~16:36:09|ReportField=ReportDate~2018/6/27|ReportField=ReportDateTime~2018/6/27 16:36:09|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2018/6/27|ReportField=CurrentTime~16:36:06|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\Users\DELL-\Desktop\C51_Practice\Big_Project\Altium\Project\原理图.SchDoc|ReportField=DocumentName~原理图.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~2018/6/20|ReportField=Organization~|ReportField=ProjectName~learn.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~learn.PrjPcb|ReportField=DataSourceFullPath~C:\Users\DELL-\Desktop\C51_Practice\Big_Project\Altium\Project\learn.PrjPcb
+1|BEEP||BEEP1|BEEP|蜂鸣器|1
+2|104||C1, C5, C6|CAP|瓷片电容|3
+3|10UF||C2|CAP-ELEC|电解电容|1
+4|30pF||C3, C4|CAP|瓷片电容|2
+5|LED||D1|LED|LED|1
+6|1x3||IR1|RAY|1x3|1
+7|3-2||JDQ1, JDQ2|RELAY|RELAY|2
+8|MOTOR||M1|MOTOR|MOTOR|1
+9|9013||Q1, Q2, Q3, Q4, Q5, Q6|PINS-3|NPN|6
+10|9012||Q7, Q8, Q9|PINS-3|PNP|3
+11|1K||R1, R2, R3, R4, R5|RES|电阻|5
+12|100||R6|RES|电阻|1
+13|10K||R7|RES|电阻|1
+14|5K||RP1|RES-ADJ|可调电阻|1
+15|按键||RSTK1, S1, S2, S3, S4, S5|KEY-4|按键|6
+16|LCD||SCR1|LCD|LCD|1
+17|ULN2003A||U1|DIP16|ULN2003A|1
+18|ST89C52||U2|STC89C52|STC89C52|1
+19|1x4||USB1|USB|1x4|1
+20|12MHz||XTA1|CRYSTAL|晶振|1
